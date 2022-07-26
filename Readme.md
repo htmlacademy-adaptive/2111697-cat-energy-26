@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Артур Лимайко](https://up.htmlacademy.ru/adaptive/26/user/2111697).
-* Наставник: `Неизвестно`.
+* Наставник: [Arthur Litovko](https://github.com/baileys-li).
 
 ---
 
