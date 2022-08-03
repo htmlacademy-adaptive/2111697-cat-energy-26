@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <header class="header">
-      <a class="header__logo logo">
-        <img src="#" width="" height="" alt="">
+      <a class="header__logo logo" href="index.html">
+        <img src="./img/index-logo.svg" width="33px" height="37px" alt="Логотип cat energy">
       </a>
-      <a class="header__logo-cat logo-cat">
-        <img src="#" width="" height="" alt="">
-      </a>
+    <a class="header__logo-cat logo-cat">
+      <img src="./img/logo-cat-energy.svg" width="101px" height="18px" alt="Cat enegry">
+    </a>
       <nav class="main-nav">
         <a class="main-nav__toggle" href="#">
           <span class="visually-hidden">Открыть меню</span>
@@ -37,7 +38,7 @@
       </nav>
     </header>
     <main class="form-containter">
-      <h1 class="visually-hidden">Анкета подбора программы</h1>
+      <!-- <h1 class="visually-hidden">Анкета подбора программы</h1> -->
       <div class="form-containter__wrapper">
         <h2 class="form-containter__wrapper-title title">Подбор программы</h2>
         <p class="form-containter__wrapper-description description">Заполните анкету, и мы подберем
@@ -135,6 +136,7 @@
             </div>
             <div class="extra-wrapper__button">
               <button class=" button" type="submit" value="отправить заявку">Отправить заявку</button>
+              <span class="extra-wrapper__important">* — Обязательные поля</span>
             </div>
           </section>
         </form>
@@ -142,18 +144,20 @@
     </main>
     <footer class="footer">
       <address class="footer__contacts contacts">
-        <b class="contacts__title">Приглашаем
-          к сотрудничеству
+        <b class="contacts__title">Приглашаем <br>
+          к сотрудничеству <br>
           дилеров!</b>
-        <p class="contacts__text">ул. Большая
-          Конюшенная, д. 19/8
+        <p class="contacts__text">ул. Большая <br>
+          Конюшенная, д. 19/8 <br>
           Санкт-Петербург</p>
-        <img class="" src="#" width="" height="" alt="">
-      </address>
+        </address>
+        <div class="footer-location">
+          <img class="footer-location__image" src="./img/footer-location.png" width="320px" height="362px" alt="Карта магазина Cat energy">
+        </div>
       <div class="footer-social social">
         <div class="footer-social__logo-cat-energy logo-cat-energy">
           <a class="logo-cat-energy-link" href="#">
-            <img src="#" width="" height="" alt="">
+            <img src="./img/footer-logo-cat-energy.svg" width="128px" height="24px" alt="Логотип cat energy">
           </a>
         </div>
         <ul class="social__list">
@@ -169,9 +173,9 @@
         </ul>
       </div>
       <div class="footer-copyright">
-        <span class="footer-copyright__text text">HTML Academy</span>
+        <span class="footer-copyright__text ">HTML Academy</span>
         <a class="copyright-link" href="https://htmlacademy.ru/">
-          <img src="#" width="" height="" alt="">
+          <img src="./img/htmlacademy.svg" width="27px" height="34px" alt="Логотип html academy">
         </a>
       </div>
     </footer>
