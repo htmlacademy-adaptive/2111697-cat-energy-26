@@ -2,36 +2,51 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/oswaldregular.woff2") format("woff2");
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/oswaldmedium.woff2") format("woff2");
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
   font-display: swap;
 }
+.button {
+  background-color: #68b738;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
 .page {
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 .page__body {
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   font-style: normal;
   margin: 0 auto;
   padding: 0;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   width: 320px;
   color: #000000;
 }
 .header {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin: 0;
   padding: 10px 17px 20px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
 }
 .header__logo {
   text-decoration: none;
@@ -44,8 +59,13 @@
   margin: 0 auto;
   padding: 0;
 }
+a {
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 .main-container {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 .main-container__wrapper {
   background-color: rgba(104, 183, 56, 0.85);
@@ -55,32 +75,18 @@
   margin: 0 auto;
   font-size: 36px;
   line-height: 36px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 400;
 }
 .main-container__slogan {
   font-size: 14px;
   line-height: 14px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0 auto;
   text-transform: uppercase;
 }
-.button {
-  background-color: #68B738;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  width: 100%;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-}
 .container {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   margin: 20px;
 }
 .container__subtitle {
@@ -91,7 +97,7 @@
   margin: 0 auto;
 }
 .description {
-  font-family: 'Arial';
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -125,7 +131,7 @@
   padding: 0;
 }
 .box__item-description {
-  font-family: 'Arial';
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -134,7 +140,7 @@
   margin: 0;
 }
 .example {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   display: inline-block;
   padding: 25px 20px 0 20px;
 }
@@ -155,7 +161,7 @@
   margin: 0 auto;
 }
 .advantages-card__text {
-  font-family: 'Arial';
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -179,7 +185,7 @@
   margin: 0;
 }
 .footer {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 .footer__contacts {
   display: flex;
@@ -195,7 +201,7 @@
   color: #111111;
 }
 .contacts__text {
-  font-family: 'Arial';
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -212,7 +218,7 @@
   justify-content: center;
 }
 .footer-copyright__text {
-  font-family: 'Arial';
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -231,7 +237,7 @@
   padding: 22px 20px;
 }
 .main-header {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 10px 17px 20px;
 }
 .main-header__logo-cat-energy {
@@ -243,13 +249,13 @@
   line-height: 36px;
   margin: 0;
   padding: 27px 20px 42px 41px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .catalog__list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin: 0 auto;
   padding: 0;
 }
@@ -270,7 +276,7 @@
 }
 .catalog__description {
   display: inline-block;
-  font-family: 'Arial';
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -285,6 +291,10 @@
 }
 .card-more__link {
   text-decoration: none;
+  background-color: #f2f2f2;
+  color: #444444;
+  font-size: 16px;
+  line-height: 20px;
 }
 .card-more__heading {
   font-weight: 400;
@@ -295,7 +305,7 @@
   text-transform: uppercase;
 }
 .card-more__text {
-  font-family: 'Arial';
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -303,14 +313,8 @@
   color: #444444;
   margin: 0;
 }
-.card-more__link {
-  background-color: #F2F2F2;
-  color: #444444;
-  font-size: 16px;
-  line-height: 20px;
-}
 .extra-product {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .extra-product__heading {
   font-weight: 400;
@@ -326,7 +330,7 @@
   padding: 20px 20px 32px;
 }
 .extra-product__head {
-  font-family: 'Oswald';
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -336,7 +340,7 @@
 }
 .extra-product__description {
   flex-direction: column;
-  font-family: 'Arial';
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -345,17 +349,14 @@
   display: flex;
   flex-wrap: wrap;
 }
-.extra-product__button {
-  border: none;
-}
 .container-gift {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   flex-direction: column;
   display: flex;
   padding: 20px 20px 35px;
 }
 .container-gift__description {
-  font-family: 'Arial';
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -366,7 +367,7 @@
   padding: 0;
 }
 .form-containter {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .form-containter__wrapper-title {
   font-weight: 400;
@@ -377,7 +378,7 @@
   padding-top: 27px;
 }
 .form-containter__wrapper-description {
-  font-family: 'Oswald';
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -393,13 +394,13 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
 }
 .list-item {
   list-style-type: none;
 }
 .list-item__text {
-  font-family: 'Oswald';
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -407,11 +408,11 @@
   color: #444444;
 }
 .list-item__input {
-  border: 1px solid #E7E7E7;
+  border: 1px solid #e7e7e7;
 }
 .wrapper-checkbox {
   margin-top: 24px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
 }
 .wrapper-checkbox__form-list {
   list-style-type: none;
@@ -486,7 +487,7 @@
   margin-top: 34px;
 }
 .extra-wrapper__important {
-  font-family: 'Arial';
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
