@@ -3,12 +3,31 @@
   margin: 20px;
 }
 
+@media (min-width: @desktop-width) {
+  .container-grid {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+}
+
+
 .container__subtitle {
   text-transform: uppercase;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .container__subtitle {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .description {
@@ -21,6 +40,14 @@
   color: #444444;
 }
 
+@media (min-width: @tablet-width) {
+  .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .container__link {
   text-align: center;
   text-transform: uppercase;
@@ -29,4 +56,12 @@
   text-decoration: none;
   color: #000000;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .container__link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
