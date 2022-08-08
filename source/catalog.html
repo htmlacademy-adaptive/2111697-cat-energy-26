@@ -225,57 +225,58 @@
   </main>
   <section class="extra-product">
     <h3 class="extra-product__heading">Дополнительные товары</h3>
-    <table class="extra-product__description">
-      <thead class="visually-hidden">
-        <tr>
-          <th>Название</th>
-          <th>Количество</th>
-          <th>Цена</th>
-          <th>Действие</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="extra-product__item">
-          <td class="extra-product__head">Сахарозаменитель</td>
-          <td class="extra-product__description">1 упаковка (100 г)</td>
-          <td class="extra-product__price">200 <abbr title="Рублей">Р.</abbr></td>
-          <td class="extra-product__button">
-            <button class="button" type="button">Заказать</button>
-          </td>
-        </tr>
-        <tr class="extra-product__item">
-          <td class="extra-product__head">Питьевая вода</td>
-          <td class="extra-product__description">1 упаковка (100 г)</td>
-          <td class="extra-product__price">200 <abbr title="Рублей">Р.</abbr></td>
-          <td class="extra-product__button">
-            <button class="button" type="button">Заказать</button>
-          </td>
-        </tr>
-        <tr class="extra-product__item">
-          <td class="extra-product__head">Молоко</td>
-          <td>1 литр</td>
-          <td>100 <abbr title="Рублей">Р.</abbr></td>
-          <td class="extra-product__button">
-            <button class="button" type="button">Заказать</button>
-          </td>
-        </tr>
-        <tr class="extra-product__item">
-          <td class="extra-product__head">Витамины</td>
-          <td>1 упаковка (30 г)</td>
-          <td>300 <abbr title="Рублей">Р.</abbr></td>
-          <td class="extra-product__button">
-            <button class="button" type="button">Заказать</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="extra-product__wrapper">
+      <table class="extra-product__description">
+        <thead class="visually-hidden">
+          <tr>
+            <th>Название</th>
+            <th>Количество</th>
+            <th>Цена</th>
+            <th>Действие</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="extra-product__item">
+            <td class="extra-product__head">Сахарозаменитель</td>
+            <td class="extra-product__amount">1 упаковка (100 г)</td>
+            <td class="extra-product__price">200 <abbr title="Рублей">Р.</abbr></td>
+            <td class="extra-product__button">
+              <button class="button" type="button">Заказать</button>
+            </td>
+          </tr>
+          <tr class="extra-product__item">
+            <td class="extra-product__head">Питьевая вода</td>
+            <td class="extra-product__amount">1 упаковка (100 г)</td>
+            <td class="extra-product__price">200 <abbr title="Рублей">Р.</abbr></td>
+            <td class="extra-product__button">
+              <button class="button" type="button">Заказать</button>
+            </td>
+          </tr>
+          <tr class="extra-product__item">
+            <td class="extra-product__head">Молоко</td>
+            <td class="extra-product__amount">1 литр</td>
+            <td class="extra-product__price">100 <abbr title="Рублей">Р.</abbr></td>
+            <td class="extra-product__button">
+              <button class="button" type="button">Заказать</button>
+            </td>
+          </tr>
+          <tr class="extra-product__item">
+            <td class="extra-product__head">Витамины</td>
+            <td class="extra-product__amount">1 упаковка (30 г)</td>
+            <td class="extra-product__price">300 <abbr title="Рублей">Р.</abbr></td>
+            <td class="extra-product__button">
+              <button class="button" type="button">Заказать</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="container-gift">
+      <p class="container-gift__description">Закажите все <br>
+        и получите чехол для <br>
+        кота в подарок!</p>
+      </div>
+    </div>
   </section>
-  <div class="container-gift">
-    <img src="./img/image-cat-in-bag.png" width="279px" height="289px" alt="">
-    <p class="container-gift__description">Закажите все <br>
-      и получите чехол для <br>
-      кота в подарок!</p>
-  </div>
   <footer class="footer">
     <address class="footer__contacts contacts">
       <b class="contacts__title">Приглашаем <br>
@@ -295,23 +296,17 @@
           <img src="./img/footer-logo-cat-energy.svg" width="128px" height="24px" alt="Логотип cat energy">
         </a>
       </div>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-copyright">
-      <span class="footer-copyright__text ">HTML Academy</span>
-      <a class="copyright-link" href="https://htmlacademy.ru/">
-        <img src="./img/htmlacademy.svg" width="27px" height="34px" alt="Логотип html academy">
-      </a>
+      <div class="social__list">
+        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
+        <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+      </div>
+      <div class="footer-copyright">
+        <span class="footer-copyright__text ">HTML Academy</span>
+        <a class="copyright-link" href="https://htmlacademy.ru/">
+          <img src="./img/htmlacademy.svg" width="27px" height="34px" alt="Логотип html academy">
+        </a>
+      </div>
     </div>
   </footer>
 </body>

@@ -3,13 +3,45 @@
   padding: 24px 20px 23px;
 }
 
+@media (min-width: @tablet-width) {
+  .user-contacts {
+    padding: 0;
+    margin-left: 69px;
+    margin-top: 75px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-contacts {
+    padding: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
 .user-contacts__title {
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   margin: 0;
-  margin-bottom: 35px;
+  padding-bottom: 35px;
 }
+
+@media (min-width: @tablet-width) {
+  .user-contacts__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-contacts__box {
+    display: grid;
+    grid-template-columns: 590px 570px;
+    gap: 80px;
+  }
+}
+
 
 .form-input {
   display: flex;
@@ -18,4 +50,73 @@
   font-size: 16px;
   line-height: 18px;
   color: #444444;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.form-input__place {
+  border: 1px solid #cdcdcd;
+  padding: 13px 15px;
+  font-family: @accent-font;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+  min-width: 189px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-input__place {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 10px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-input {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-input__email {
+    display: grid;
+    grid-template-columns: 63px 551px;
+    gap: 18px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-input__email {
+    display: grid;
+    grid-template-columns: 63px 486px;
+    gap: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-input__tel {
+    display: grid;
+    grid-template-columns: 85px 533px;
+    gap: 14px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-input__tel {
+    display: grid;
+    grid-template-columns: 85px 472px;
+    gap: 15px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

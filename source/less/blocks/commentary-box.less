@@ -4,10 +4,65 @@
   padding-right: 20px;
 }
 
+@media (min-width: @tablet-width) {
+  .commentary-box {
+    margin: 0;
+    padding-left: 69px;
+    padding-top: 65px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .commentary-box {
+    margin: 0;
+    padding-left: 110px;
+    padding-top: 110px;
+  }
+}
+
 .commentary-box__title {
   margin: 0;
   margin-bottom: 38px;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .commentary-box__title {
+    margin: 0;
+    margin-bottom: 76px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.commentary-box__area {
+  text-transform: uppercase;
+  max-height: 144px;
+  min-width: 280px;
+  border: 1px solid #e7e7e7;
+  font-family: @accent-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .commentary-box__area {
+    min-width: 625px;
+    font-size: 20px;
+    line-height: 30px;
+    max-height: 164px;
+    padding-left: 19px;
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .commentary-box__area {
+    min-width: 1216px;
+  }
 }

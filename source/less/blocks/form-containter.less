@@ -2,6 +2,20 @@
   background-color: #ffffff;
 }
 
+@media (min-width: @tablet-width) {
+  .containter-field__desktop-wrapper {
+    margin-left: 71px;
+    margin-right: 67px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .containter-field__desktop-wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .form-containter__wrapper-title {
   font-weight: 400;
   font-size: 36px;
@@ -9,6 +23,16 @@
   margin: 0;
   padding-left: 20px;
   padding-top: 27px;
+  padding-bottom: 37px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-containter__wrapper-title {
+    padding-left: 71px;
+    padding-bottom: 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .form-containter__wrapper-description {
@@ -19,6 +43,15 @@
   line-height: 18px;
   text-transform: uppercase;
   padding-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-containter__wrapper-description {
+    padding-left: 71px;
+    padding-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .containter-field__list {
@@ -32,6 +65,14 @@
   border-bottom: 1px solid #d9d9d9;
 }
 
+@media (min-width: @tablet-width) {
+  .containter-field__list {
+    padding: 0;
+    border: none;
+    gap: 20px;
+  }
+}
+
 .list-item {
   list-style-type: none;
 }
@@ -39,12 +80,70 @@
 .list-item__text {
   font-family: @accent-font;
   font-style: normal;
+  text-transform: uppercase;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
 }
 
+@media (min-width: @tablet-width) {
+  .list-item__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .list-item__nickname {
+    display: grid;
+    grid-template-columns: 54px 566px;
+    column-gap: 10px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .list-item__weight {
+    display: grid;
+    grid-template-columns: 84px 536px;
+    column-gap: 10px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .list-item__age {
+    display: grid;
+    grid-template-columns: 120px 497px;
+    column-gap: 13px;
+  }
+}
+
+
 .list-item__input {
   border: 1px solid #e7e7e7;
+  padding-top: 13px;
+  padding-bottom: 11px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .list-item__input {
+    padding-left: 18px;
+    padding-right: 10px;
+    padding-top: 9px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .list-item__input {
+    padding-left: 23px;
+  }
 }

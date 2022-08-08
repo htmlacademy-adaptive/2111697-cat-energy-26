@@ -2,6 +2,13 @@
   background-color: #ffffff;
 }
 
+@media (min-width: @tablet-width) {
+  .extra-product {
+    background-color: #ffffff;
+    padding-bottom: 69px;
+  }
+}
+
 .extra-product__heading {
   font-weight: 400;
   font-size: 24px;
@@ -11,10 +18,37 @@
   padding: 0;
 }
 
+@media (min-width: @tablet-width) {
+  .extra-product__heading {
+    padding-left: 70px;
+    padding-bottom: 80px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-product__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .extra-product__item {
   flex-direction: column;
   display: flex;
   padding: 20px 20px 32px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+@media (min-width: @desktop-width) {
+  .extra-product__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .extra-product__head {
@@ -25,9 +59,56 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #222222;
+  word-break: break-all;
+  max-width: 163px;
 }
 
-.extra-product__description {
+@media (min-width: @tablet-width) {
+  .extra-product__head {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    word-break: break-all;
+    max-width: 163px;
+  }
+}
+
+.extra-product__amount {
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+  word-break: break-all;
+  max-width: 126px;
+}
+
+@media (min-width: @tablet-width) {
+  .extra-product__amount {
+    font-family: @main-font;
+    font-size: 16px;
+    line-height: 20px;
+    word-break: break-all;
+    max-width: 132px;
+  }
+}
+
+.extra-product__price {
+  font-family: @main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  max-width: 44px;
+  word-break: break-all;
+}
+
+@media (min-width: @tablet-width) {
+  .extra-product__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.extra-product__text {
   flex-direction: column;
   font-family: @main-font;
   font-style: normal;
@@ -37,4 +118,65 @@
   color: #444444;
   display: flex;
   flex-wrap: wrap;
+}
+
+.extra-product__description {
+  border-bottom: 1px solid #cdcdcd;
+  display: grid;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .extra-product__description {
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 1px solid #cdcdcd;
+    display: grid;
+    grid-template-columns: 708px;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-product__description {
+    background-color: #ffffff;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+    min-width: 70%;
+  }
+}
+
+// gift bag container
+.container-gift {
+  flex-direction: column;
+  display: flex;
+  padding: 20px 20px 35px;
+  color: #ffffff;
+  background-color: @accent-colors;
+  background-image: linear-gradient(fade(@accent-colors, 85%),
+    fade(@accent-colors, 85%)),
+    url("../img/image-cat-in-bag.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container-gift__description {
+  font-family: @main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .container-gift {
+    margin-right: 110px;
+  }
 }
