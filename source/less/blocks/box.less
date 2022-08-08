@@ -17,7 +17,6 @@
   }
 }
 
-
 .box__title {
   font-size: 36px;
   line-height: 40px;
@@ -43,7 +42,7 @@
 @media (min-width: @tablet-width) {
   .box__list {
     display: grid;
-    grid-template-columns: 244px 244px;
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     gap: 37px 140px;
   }
@@ -68,7 +67,6 @@
   color: #444444;
   margin: 0;
 }
-
 
 @media (min-width: @tablet-width) {
   .box__item-description {

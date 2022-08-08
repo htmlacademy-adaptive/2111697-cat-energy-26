@@ -1,11 +1,31 @@
 .extra-product {
   background-color: #ffffff;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: @tablet-width) {
   .extra-product {
-    background-color: #ffffff;
     padding-bottom: 69px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-product {
+    padding-bottom: 86px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-product__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -16,6 +36,8 @@
   text-align: inherit;
   margin: 0;
   padding: 0;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #cdcdcd;
 }
 
 @media (min-width: @tablet-width) {
@@ -29,25 +51,37 @@
 }
 
 @media (min-width: @desktop-width) {
-  .extra-product__wrapper {
-    display: flex;
-    justify-content: space-between;
+  .extra-product__heading {
+    border: none;
   }
 }
 
 .extra-product__item {
   flex-direction: column;
   display: flex;
-  padding: 20px 20px 32px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #cdcdcd;
+}
+
+@media (min-width: @tablet-width) {
+  .extra-product__item {
+    border: 1px solid #cdcdcd;
+    padding: 28px 36px;
+    display: grid;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .extra-product__item {
     display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    border-left: none;
+    border-right: none;
     flex-direction: row;
-    align-items: center;
+    width: 894px;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -60,7 +94,7 @@
   text-transform: uppercase;
   color: #222222;
   word-break: break-all;
-  max-width: 163px;
+  width: 163px;
 }
 
 @media (min-width: @tablet-width) {
@@ -78,7 +112,7 @@
   line-height: 20px;
   color: #444444;
   word-break: break-all;
-  max-width: 126px;
+  width: 126px;
 }
 
 @media (min-width: @tablet-width) {
@@ -87,7 +121,15 @@
     font-size: 16px;
     line-height: 20px;
     word-break: break-all;
-    max-width: 132px;
+    width: 132px;
+    justify-self: end;
+    text-align: end;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-product__amount {
+    text-align: start;
   }
 }
 
@@ -98,6 +140,7 @@
   font-size: 14px;
   line-height: 14px;
   max-width: 44px;
+  color: #444444;
   word-break: break-all;
 }
 
@@ -105,6 +148,7 @@
   .extra-product__price {
     font-size: 16px;
     line-height: 20px;
+    justify-self: end;
   }
 }
 
@@ -149,6 +193,20 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .extra-product__button {
+    grid-column: 1/4;
+    grid-row: 2/2;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .extra__button {
+    padding: 7px 26px;
+  }
+}
+
 // gift bag container
 .container-gift {
   flex-direction: column;
@@ -156,12 +214,21 @@
   padding: 20px 20px 35px;
   color: #ffffff;
   background-color: @accent-colors;
-  background-image: linear-gradient(fade(@accent-colors, 85%),
-    fade(@accent-colors, 85%)),
+  background-image: linear-gradient(
+      fade(@accent-colors, 85%),
+      fade(@accent-colors, 85%)
+    ),
     url("../img/image-cat-in-bag.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-top: 35px;
+}
+
+@media (min-width: @desktop-width) {
+  .container-gift {
+    margin: 0;
+  }
 }
 
 .container-gift__description {
@@ -173,10 +240,4 @@
   text-align: center;
   margin: 0;
   padding: 0;
-}
-
-@media (min-width: @desktop-width) {
-  .container-gift {
-    margin-right: 110px;
-  }
 }

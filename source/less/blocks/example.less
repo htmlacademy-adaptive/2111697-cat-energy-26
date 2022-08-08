@@ -17,6 +17,10 @@
     background-color: #f2f2f2;
     padding-left: 110px;
     padding-right: 110px;
+    display: grid;
+    grid-template-columns: 436px auto;
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
   }
 }
 
@@ -36,6 +40,15 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .example__description {
     text-align: justify;
@@ -46,12 +59,38 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__description {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    padding-top: 30px;
+    margin: 0;
+  }
+}
+
 .advantages-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 32px;
-  margin: 0 auto;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-wrapper {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    justify-content: center;
+  }
 }
 
 .advantages-card__text {
@@ -78,6 +117,51 @@
   line-height: 20px;
 }
 
+@media (min-width: @tablet-width) {
+  .advantages-price {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-price {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-price__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .advantages-price__cost {
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-price__cost {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .before-after-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .before-after-wrapper {
+    grid-column: 2 /2;
+    grid-row: 1/ 4;
+  }
 }
