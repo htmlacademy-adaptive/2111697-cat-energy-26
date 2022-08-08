@@ -43,6 +43,7 @@
   line-height: 18px;
   text-transform: uppercase;
   padding-left: 20px;
+  padding-bottom: 39px;
 }
 
 @media (min-width: @tablet-width) {
@@ -75,9 +76,12 @@
 
 .list-item {
   list-style-type: none;
+  display: flex;
 }
 
 .list-item__text {
+  grid-column: 1/1;
+  grid-row: 1/1;
   font-family: @accent-font;
   font-style: normal;
   text-transform: uppercase;
@@ -94,6 +98,12 @@
   }
 }
 
+.list-item__nickname {
+  display: grid;
+  grid-template-columns: 57px 209px;
+  column-gap: 10px;
+  align-items: center;
+}
 
 @media (min-width: @tablet-width) {
   .list-item__nickname {
@@ -103,12 +113,26 @@
   }
 }
 
+.list-item__weight {
+  display: grid;
+  grid-template-columns: 75px 191px;
+  column-gap: 10px;
+  align-items: center;
+}
+
 @media (min-width: @tablet-width) {
   .list-item__weight {
     display: grid;
     grid-template-columns: 84px 536px;
     column-gap: 10px;
   }
+}
+
+.list-item__age {
+  display: grid;
+  grid-template-columns: 97px 169px;
+  column-gap: 10px;
+  align-items: center;
 }
 
 @media (min-width: @tablet-width) {
