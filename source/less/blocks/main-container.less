@@ -9,6 +9,7 @@
   display: grid;
   justify-items: center;
   justify-content: center;
+  padding: 10px var(--side-offset) 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -23,12 +24,9 @@
 @media (min-width: @desktop-width) {
   .main-container__wrapper {
     display: grid;
-    max-width: 1220px;
     margin: 0 auto;
     background-color: #ffffff;
-    grid-template-columns: 450px auto;
-    grid-template-rows: 200px 100px 150px;
-    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

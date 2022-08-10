@@ -1,20 +1,5 @@
 .box {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 29px;
-}
-
-@media (min-width: @tablet-width) {
-  .box {
-    margin-left: 30px;
-    margin-right: 109px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .box {
-    margin: 71px 110px 26px;
-  }
+  padding: 10px var(--side-offset) 20px;
 }
 
 .box__title {
@@ -34,6 +19,9 @@
 }
 
 .box__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
@@ -51,10 +39,8 @@
 @media (min-width: @desktop-width) {
   .box__list {
     display: grid;
-    grid-template-columns: repeat(4, 246px);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(4, auto);
     column-gap: 70px;
-    padding: 0;
   }
 }
 

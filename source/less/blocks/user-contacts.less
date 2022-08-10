@@ -8,6 +8,7 @@
     padding: 0;
     margin-left: 69px;
     margin-top: 75px;
+    margin-right: 65px;
   }
 }
 
@@ -71,7 +72,7 @@
 
 .form-input__email {
   display: grid;
-  grid-template-columns: 50px 218px;
+  grid-template-columns: 50px minmax(100px, 1200px);
   grid-template-rows: 45px;
   gap: 11px;
   padding-bottom: 14px;
@@ -83,8 +84,8 @@
 
 @media (min-width: @tablet-width) {
   .form-input__email {
-    display: grid;
-    grid-template-columns: 63px 551px;
+    grid-template-columns: 63px minmax(100px, 1200px);
+    grid-template-rows: 45px;
     gap: 18px;
     font-size: 20px;
     line-height: 30px;
@@ -103,7 +104,7 @@
 
 .form-input__tel {
   display: grid;
-  grid-template-columns: 68px 204px;
+  grid-template-columns: 68px minmax(100px, 1200px);
   grid-template-rows: 45px;
   gap: 8px;
   font-size: 16px;
@@ -114,8 +115,8 @@
 
 @media (min-width: @tablet-width) {
   .form-input__tel {
-    display: grid;
-    grid-template-columns: 85px 533px;
+    grid-template-columns: 85px minmax(100px, 1200px);
+    grid-template-rows: 45px;
     gap: 14px;
     font-size: 20px;
     line-height: 30px;
