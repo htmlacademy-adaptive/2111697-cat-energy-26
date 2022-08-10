@@ -1,22 +1,17 @@
 .user-contacts {
   margin: 0;
-  padding: 24px 20px 23px;
+  padding: 29px var(--side-offset) 23px;
 }
 
 @media (min-width: @tablet-width) {
   .user-contacts {
-    padding: 0;
-    margin-left: 69px;
-    margin-top: 75px;
-    margin-right: 65px;
+    padding: 71px var(--side-offset) 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .user-contacts {
-    padding: 0;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding: 69px var(--side-offset) 24px;
   }
 }
 
@@ -25,7 +20,7 @@
   font-size: 24px;
   line-height: 26px;
   margin: 0;
-  padding-bottom: 35px;
+  margin-bottom: 69px;
 }
 
 @media (min-width: @tablet-width) {
@@ -38,8 +33,9 @@
 @media (min-width: @desktop-width) {
   .user-contacts__box {
     display: grid;
-    grid-template-columns: 590px 570px;
+    grid-template-columns: repeat(2, 1fr);
     gap: 80px;
+    align-items: center;
   }
 }
 
@@ -72,20 +68,20 @@
 
 .form-input__email {
   display: grid;
-  grid-template-columns: 50px minmax(100px, 1200px);
-  grid-template-rows: 45px;
+  grid-template-columns: 50px minmax(219px, 1fr);
+  align-items: center;
   gap: 11px;
-  padding-bottom: 14px;
+  margin-bottom: 14px;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
   .form-input__email {
-    grid-template-columns: 63px minmax(100px, 1200px);
-    grid-template-rows: 45px;
+    grid-template-columns: 64px minmax(219px, 1fr);
     gap: 18px;
     font-size: 20px;
     line-height: 30px;
@@ -94,29 +90,27 @@
 
 @media (min-width: @desktop-width) {
   .form-input__email {
-    display: grid;
-    grid-template-columns: 63px 486px;
     gap: 20px;
-    font-size: 20px;
-    line-height: 30px;
+    grid-template-columns: 63px minmax(219px, 1fr);
+    margin: 0;
   }
 }
 
 .form-input__tel {
   display: grid;
-  grid-template-columns: 68px minmax(100px, 1200px);
-  grid-template-rows: 45px;
+  grid-template-columns: 68px minmax(204px, 1fr);
   gap: 8px;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
+  align-items: center;
   text-transform: uppercase;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
   .form-input__tel {
-    grid-template-columns: 85px minmax(100px, 1200px);
-    grid-template-rows: 45px;
+    grid-template-columns: 84px minmax(204px, 1fr);
     gap: 14px;
     font-size: 20px;
     line-height: 30px;
@@ -125,10 +119,7 @@
 
 @media (min-width: @desktop-width) {
   .form-input__tel {
-    display: grid;
-    grid-template-columns: 85px 472px;
+    grid-template-columns: 85px minmax(204px, 1fr);
     gap: 15px;
-    font-size: 20px;
-    line-height: 30px;
   }
 }

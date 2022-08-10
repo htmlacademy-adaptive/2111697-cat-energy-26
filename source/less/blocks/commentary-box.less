@@ -1,22 +1,18 @@
 .commentary-box {
   margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 var(--side-offset) 23px;
 }
 
 @media (min-width: @tablet-width) {
   .commentary-box {
     margin: 0;
-    padding-left: 69px;
-    padding-top: 65px;
+    padding: 65px var(--side-offset) 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .commentary-box {
     margin: 0;
-    padding-left: 110px;
-    padding-top: 110px;
   }
 }
 
@@ -39,8 +35,9 @@
 
 .commentary-box__area {
   text-transform: uppercase;
-  max-height: 144px;
-  min-width: 98%;
+  padding: 0;
+  width: 99.5%;
+  height: 150px;
   border: 1px solid #e7e7e7;
   font-family: @accent-font;
   font-style: normal;
@@ -52,17 +49,9 @@
 
 @media (min-width: @tablet-width) {
   .commentary-box__area {
-    min-width: 93%;
+    width: 99.5%;
     font-size: 20px;
     line-height: 30px;
-    max-height: 164px;
-    padding-left: 19px;
-    padding-top: 10px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .commentary-box__area {
-    min-width: 1216px;
+    height: 174px;
   }
 }
