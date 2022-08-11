@@ -1,5 +1,15 @@
 .page {
-  background: #e5e5e5;
+  background-color: #ffffff;
+  --side-offset: 20px;
+
+  @media (min-width: @tablet-width) {
+    --side-offset: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    @half-width:(@container-max-width / 2);
+    --side-offset: calc(50vw - @half-width);
+  }
 }
 
 .page__body {
@@ -10,7 +20,16 @@
   font-style: normal;
   margin: 0 auto;
   padding: 0;
-  background-color: #e5e5e5;
-  width: 320px;
   color: #000000;
+}
+
+.page__hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

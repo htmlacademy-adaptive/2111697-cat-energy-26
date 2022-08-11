@@ -1,0 +1,81 @@
+.advantages-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-wrapper {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    justify-content: center;
+  }
+}
+
+.advantages-card__text {
+  font-family: @main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #444444;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-card__parametr {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-price {
+  display: flex;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-price {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-price {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-price__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.advantages-price__cost {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-price__cost {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
