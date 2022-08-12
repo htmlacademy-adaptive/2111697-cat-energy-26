@@ -18,10 +18,8 @@
 }
 
 .programs {
-  display: grid;
+  padding: 20px;
   background-color: #f2f2f2;
-  justify-content: center;
-  align-items: center;
 }
 
 .programs__subtitle {
@@ -31,6 +29,7 @@
   font-weight: 400;
   margin: 0 auto;
 }
+
 
 @media (min-width: @tablet-width) {
   .programs__subtitle {
@@ -47,6 +46,10 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+  padding-top: 29px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -58,13 +61,28 @@
 }
 
 .programs__link {
-  text-align: center;
+  position: relative;
+  text-align: left;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
   color: #000000;
   margin: 0;
+  padding-top: 22px;
+  display: block;
+}
+
+.programs__link::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 24px;
+  left: 93px;
+  width: 32px;
+  height: 11px;
+  background-image: url("../img/icon/arrow-link.svg");
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
