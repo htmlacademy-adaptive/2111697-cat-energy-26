@@ -44,10 +44,28 @@
 }
 
 @media (min-width: @tablet-width) {
+  .site-list__item a {
+    list-style-type: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+  }
+}
+
+@media (min-width: @tablet-width) {
   .site-list__item {
+    position: relative;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  .site-list__item--current::before {
+    position: absolute;
+    content: "";
+    border: 1px solid #68b738;
+    width: calc(100% - 3px);
+    bottom: -10px;
   }
 }
 

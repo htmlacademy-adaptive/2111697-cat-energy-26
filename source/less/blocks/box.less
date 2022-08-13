@@ -12,6 +12,7 @@
 
 @media (min-width: @tablet-width) {
   .box__title {
+    padding-top: 25px;
     padding-bottom: 32px;
     font-weight: 400;
     font-size: 60px;
@@ -28,17 +29,13 @@
   padding: 0;
 }
 
-// .box__item {
-//   display: block;
-//   text-align: center;
-// }
-
 @media (min-width: @tablet-width) {
   .box__list {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     gap: 37px 140px;
+    counter-reset: section;
   }
 }
 
@@ -47,6 +44,17 @@
     display: grid;
     grid-template-columns: repeat(4, auto);
     column-gap: 70px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .box__item::before {
+    counter-increment: section;
+    content: counters(section, ".");
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
   }
 }
 
