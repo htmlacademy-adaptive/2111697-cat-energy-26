@@ -22,6 +22,14 @@
   background-color: #f2f2f2;
 }
 
+@media (min-width: @desktop-width) {
+  .programs {
+    display: grid;
+    gap: 16px;
+    padding: 0;
+  }
+}
+
 .programs__subtitle {
   text-transform: uppercase;
   font-size: 24px;
@@ -38,6 +46,12 @@
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__subtitle {
+    padding-top: 77px;
   }
 }
 
@@ -66,6 +80,14 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .programs__description {
+    padding-left: 51px;
+    padding-right: 51px;
+    padding-top: 48px;
+  }
+}
+
 .arrow-link {
   position: relative;
   text-align: left;
@@ -83,6 +105,19 @@
 .arrow-link:hover,
 .arrow-link:focus {
   color: #000000;
+}
+
+.arrow-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow-link:active::before {
+  transform: scaleX(1.29);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow-link:active::after {
+  transform: translateX(72%);
 }
 
 .arrow-link:hover::before,
@@ -119,9 +154,16 @@
 
 @media (min-width: @tablet-width) {
   .programs__link {
-    padding: 0;
-    padding-top: 24px;
-    padding-left: 53px;
+    padding: 24px 0 32px 53px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__link {
+    padding: 24px 0 55px 52px;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;

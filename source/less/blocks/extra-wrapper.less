@@ -3,7 +3,6 @@
   padding: 0 var(--side-offset) 20px;
 }
 
-
 @media (min-width: @tablet-width) {
   .extra-wrapper {
     margin: 0;
@@ -15,7 +14,7 @@
   .extra-wrapper__section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 123px;
+    gap: 32px 61px;
     align-items: center;
     justify-items: flex-start;
   }
@@ -25,7 +24,7 @@
   .extra-wrapper__section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 60px 104px;
+    gap: 61px 81px;
     padding: 0;
   }
 }
@@ -45,6 +44,61 @@
   }
 }
 
+.extra-wrapper__label > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.extra-wrapper__label > span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  margin-bottom: 10px;
+}
+
+.extra-wrapper__label > span::before {
+  content: "";
+  width: 1.87em;
+  height: 1.87em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #cdcdcd;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+// hover
+.extra-wrapper__label > input:not(:disabled):not(:checked) + span:hover::before {
+  border-color: #bababa;
+  box-shadow: -1px 1px 5px #bababa;
+}
+
+// active
+.extra-wrapper__label > input:not(:disabled):active + span::before {
+  box-shadow: -1px 1px 5px #bababa;
+}
+
+//focus
+.extra-wrapper__label > input:focus + span::before {
+  box-shadow: 0 0 0 0.2rem rgba(186, 186, 186, 0.25);
+}
+
+.extra-wrapper__label > input:focus:not(:checked) + span::before {
+  border-color: #68b738;
+}
+
+.extra-wrapper__label > input:checked + span::before {
+  background-image: url("/img/icon/tick.svg");
+}
+
+// disabled
+.extra-wrapper__label > input:disabled + span {
+  color: #000000;
+  opacity: 0.3;
+}
+
 .extra-wrapper__name {
   font-weight: 400;
   font-size: 16px;
@@ -59,18 +113,26 @@
   }
 }
 
+.extra-wrapper__button-large {
+  padding: 7px 44px;
+  margin-bottom: 28px;
+}
+
 @media (min-width: @tablet-width) {
   .extra-wrapper__button-large {
     padding: 13px 45px;
     border: none;
     font-size: 20px;
     line-height: 20px;
+    min-width: 282px;
+    height: 52px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .extra-wrapper__button-large {
     padding: 13px 188px;
+    min-width: 568px;
   }
 }
 
