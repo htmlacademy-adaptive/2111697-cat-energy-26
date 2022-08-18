@@ -1,5 +1,30 @@
 .extra-product {
-  background-color: #ffffff;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 85%;
+    border: 2px solid #68b738;
+    top: 48px;
+    right: 1px;
+    z-index: -1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .extra-product {
+    position: relative;
+
+    &::before {
+      top: 55px;
+      width: 100%;
+    }
+  }
+}
+
+.extra-product-box {
+  z-index: 1;
   padding: 10px var(--side-offset) 20px;
 }
 
@@ -29,7 +54,9 @@
   padding: 0;
   padding-top: 25px;
   padding-bottom: 36px;
-  border-bottom: 1px solid #cdcdcd;
+  width: fit-content;
+  padding-right: 22px;
+  background-color: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
@@ -38,12 +65,15 @@
     font-size: 36px;
     line-height: 36px;
     padding-bottom: 80px;
+    padding-left: 37px;
+    padding-right: 36px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .extra-product__heading {
-    border: none;
+    padding-left: 40px;
+    padding-right: 35px;
   }
 }
 
@@ -52,6 +82,10 @@
   display: flex;
   padding-bottom: 20px;
   border-bottom: 1px solid #cdcdcd;
+}
+
+.extra-product__item:nth-child(1) {
+  border-top: 1px solid #cdcdcd;
 }
 
 @media (min-width: @tablet-width) {
@@ -104,6 +138,7 @@
 }
 
 .extra-product__amount {
+  font-family: @main-font;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -218,7 +253,6 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
 
 @media (min-width: @desktop-width) {
   .extra__button {

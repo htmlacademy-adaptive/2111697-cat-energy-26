@@ -1,35 +1,62 @@
 .commentary-box {
-  margin: 0;
-  padding: 0 var(--side-offset) 23px;
+  position: relative;
 }
 
-@media (min-width: @tablet-width) {
-  .commentary-box {
-    margin: 0;
-    padding: 65px var(--side-offset) 20px;
+.commentary-box::before {
+  position: absolute;
+  content: "";
+  border: 2px solid #68b738;
+  width: 85%;
+  top: 15px;
+  right: 1px;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    top: 86px;
+    right: 1px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .commentary-box {
+.commentary-box-wrap {
+  margin: 0;
+  padding: 0 var(--side-offset) 23px;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 65px var(--side-offset) 20px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin: 0;
   }
 }
 
 .commentary-box__title {
   margin: 0;
-  margin-bottom: 38px;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-}
+  background-color: #ffffff;
+  width: 42%;
+  padding-bottom: 38px;
+  padding-right: 20px;
 
-@media (min-width: @tablet-width) {
-  .commentary-box__title {
+  @media (min-width: @tablet-width) {
     margin: 0;
     margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
+    margin-left: -27px;
+    padding-left: 25px;
+    width: 32%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 17%;
+    padding-left: 0;
+    text-align: end;
   }
 }
 

@@ -95,26 +95,30 @@
           </div>
         </div>
         <div class="user-contacts">
-          <h3 class="user-contacts__title title">
-            Контактные данные
-            (владельца кота)</h3>
-            <div class="user-contacts__box">
-              <label class="form-input form-input__email " for="email">E-mail:*
-                <input class="form-input__place" type="email" id="email" name="email-field" placeholder="kuklachev@gmail.com" value="kuklachev@gmail.com" required>
-              </label>
-              <label class="form-input form-input__tel" for="tel">Телефон:*
-                <input class="form-input__place" type="tel" id="tel" name="tel-field" placeholder="8 (960) 900-60-90" value="8 (960) 900-60-90" required>
-              </label>
-            </div>
+          <div class="user-contacts-holder">
+            <h3 class="user-contacts__title title">
+              Контактные данные
+              (владельца кота)</h3>
+              <div class="user-contacts__box">
+                <label class="form-input form-input__email " for="email">E-mail:*
+                  <input class="form-input__place" type="email" id="email" name="email-field" placeholder="kuklachev@gmail.com" value="kuklachev@gmail.com" required>
+                </label>
+                <label class="form-input form-input__tel" for="tel">Телефон:*
+                  <input class="form-input__place" type="tel" id="tel" name="tel-field" placeholder="8 (960) 900-60-90" value="8 (960) 900-60-90" required>
+                </label>
+              </div>
+          </div>
         </div>
         <div class="commentary-box">
-          <h3 class="commentary-box__title title">Комментарий</h3>
-          <textarea class="commentary-box__area" name="comment" id="comment-field" cols="30"
-            placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="commentary-box-wrap">
+            <h3 class="commentary-box__title title">Комментарий</h3>
+            <textarea class="commentary-box__area" name="comment" id="comment-field" cols="30"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </div>
         <section class="extra-wrapper">
-          <h3 class="extra-wrapper__title">Дополнительно</h3>
           <section class="extra-wrapper__section">
+            <h3 class="extra-wrapper__title">Дополнительно</h3>
             <div class="extra-wrapper__list">
               <label class="extra-wrapper__label">
                 <input type="checkbox" name="sugar" checked>
