@@ -1,35 +1,27 @@
 .commentary-box {
   position: relative;
-}
-
-.commentary-box::before {
-  position: absolute;
-  content: "";
-  border: 2px solid #68b738;
-  width: 85%;
-  top: 15px;
-  right: 1px;
-  z-index: -1;
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-    top: 86px;
-    right: 1px;
-  }
-}
-
-.commentary-box-wrap {
   margin: 0;
   padding: 0 var(--side-offset) 23px;
   z-index: 1;
 
-  @media (min-width: @tablet-width) {
-    margin: 0;
-    padding: 65px var(--side-offset) 20px;
+  &::before {
+    position: absolute;
+    content: "";
+    border: 2px solid #68b738;
+    width: 85%;
+    top: 15px;
+    right: 0;
+    z-index: -1;
   }
 
-  @media (min-width: @desktop-width) {
-    margin: 0;
+  @media (min-width: @tablet-width) {
+    padding: 65px var(--side-offset) 43px;
+
+    &::before {
+      width: 100%;
+      top: 86px;
+      right: 0;
+    }
   }
 }
 
@@ -40,7 +32,7 @@
   line-height: 26px;
   background-color: #ffffff;
   width: 42%;
-  padding-bottom: 38px;
+  padding-bottom: 37px;
   padding-right: 20px;
 
   @media (min-width: @tablet-width) {
