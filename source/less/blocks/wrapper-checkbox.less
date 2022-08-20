@@ -1,18 +1,32 @@
 .wrapper-checkbox {
-  margin-top: 24px;
   border-bottom: 1px solid #d9d9d9;
+  padding-top: 27px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .wrapper-checkbox {
+    margin-top: 72px;
+    border: 1px solid #d9d9d9;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wrapper-checkbox {
+    margin: 0;
+    border: 1px solid #d9d9d9;
+  }
 }
 
 .wrapper-checkbox__form-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
-.wrapper-checkbox__form-item {
-  margin-bottom: 25px;
+.wrapper-checkbox__form-item:not(:last-of-type) {
+  margin-bottom: 18px;
 }
 
 .form-label {
@@ -21,4 +35,69 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
+}
+
+.control > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control > span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.control > span::before {
+  content: "";
+  display: inline-block;
+  width: 1.87em;
+  height: 1.87em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+// hover
+.control > input:not(:disabled):not(:checked) + span:hover::before {
+  opacity: 0.7;
+  box-shadow: -1px 1px 5px #bababa;
+}
+
+// .control > input:not(:disabled):active + span::before {
+//   opacity: 0.5;
+//   box-shadow: -1px 1px 5px #bababa;
+// }
+
+// checked
+.control > input:checked + span::before {
+  background-image: url("/img/icon/radiobutton-active.svg");
+}
+
+// focus
+.control > input:focus + span::before {
+  box-shadow: 0 0 0 0.2rem rgba(186, 186, 186, 0.25);
+}
+
+.control > input:focus:not(:checked) + span::before {
+  border-color: #68b738;
+}
+
+// disabled
+.control > input:disabled + span {
+  color: #222222;
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .form-label {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

@@ -1,8 +1,36 @@
 .container-gift {
-  background-color: #ffffff;
   flex-direction: column;
   display: flex;
   padding: 20px 20px 35px;
+  color: #ffffff;
+  background-color: @accent-colors;
+  background-image: linear-gradient(
+      fade(@accent-colors, 85%),
+      fade(@accent-colors, 85%)
+    ),
+    url("../img/image-cat-in-bag.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 35px;
+  width: 240px;
+  height: 234px;
+}
+
+@media (min-width: @tablet-width) {
+  .container-gift {
+    width: 94.5%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container-gift {
+    margin: 0;
+    width: 205px;
+    align-items: end;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .container-gift__description {
@@ -11,7 +39,6 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #000000;
   text-align: center;
   margin: 0;
   padding: 0;

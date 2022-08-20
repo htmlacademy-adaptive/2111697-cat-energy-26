@@ -1,7 +1,23 @@
 .example {
   background-color: #eaeaea;
-  display: inline-block;
-  padding: 25px 20px 0 20px;
+  padding: 43px var(--side-offset) 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
 
 .example__title {
@@ -9,44 +25,52 @@
   line-height: 40px;
   font-weight: 400;
   margin: 0;
+  padding-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .example__title {
+    padding-bottom: 63px;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    padding: 0;
+    padding-bottom: 116px;
+    margin: 0;
+  }
 }
 
 .example__description {
-  padding: 0;
-}
-
-.advantages-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 32px;
-  margin: 0 auto;
-}
-
-.advantages-card__text {
-  font-family: @main-font;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
+  padding-bottom: 20px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
   color: #444444;
-  margin: 0;
-  padding: 0;
 }
 
-.advantages-card__parametr {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-  margin: 0;
-  padding: 0;
+@media (min-width: @tablet-width) {
+  .example__description {
+    text-align: justify;
+    margin: 0;
+    padding-bottom: 54px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
-.advantages-price {
-  display: flex;
-  text-transform: uppercase;
-  line-height: 20px;
-}
-
-.advantages-price__cost {
-  margin: 0;
+@media (min-width: @desktop-width) {
+  .example__description {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    padding-top: 30px;
+    max-width: 403px;
+  }
 }
