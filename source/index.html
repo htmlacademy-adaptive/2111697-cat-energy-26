@@ -10,19 +10,17 @@
 
 <body class="page__body">
   <header class="header">
-    <div class="header-logo-wrapper">
       <a class="header__logo logo" href="index.html">
         <img src="./img/index-logo.svg" width="33" height="37" alt="Логотип cat energy">
       </a>
       <a class="header__logo-cat logo-cat">
         <img src="./img/logo-cat-energy.svg" width="101" height="18" alt="Cat enegry">
       </a>
-    </div>
-    <nav class="main-nav">
-      <a class="main-nav__toggle" href="#">
+    <nav class="main-nav main-nav--closed">
+      <!-- <button class="main-nav__toggle" type="button">
         <span class="page__hidden"> Открыть меню
         </span>
-      </a>
+      </button> -->
       <ul class="main-nav__list site-list">
         <li class="site-list__item
             site-list__item--current">
@@ -44,67 +42,68 @@
     </nav>
   </header>
   <main class="main-container">
-    <div class="main-container__wrapper">
-      <img src="#" width="" height="" alt="">
-      <h1 class="main-container__title title">
-        Функциональное <br>питание для котов
-      </h1>
-      <p class="main-container__slogan slogan">
-        Занялся собой?Займись котом!
-      </p>
-      <picture class="main-container__picture">
-        <img src="./img/index-cat-energy-pro.png" width="280" height="270" alt="Cat energy pro со вкусом курицы">
-      </picture>
-      <a class="main-container__button button" href="form.html">Подобрать программу
-      </a>
-    </div>
+    <section class="promo">
+      <div class="promo__wrapper">
+        <h1 class="promo__title">
+          Функциональное питание для котов
+        </h1>
+        <p class="promo__slogan">
+          Занялся собой?Займись котом!
+        </p>
+        <picture class="promo__picture">
+          <img src="../img/mobile-cat-energy-pro.png" width="280" height="270" alt="Cat energy pro со вкусом курицы">
+        </picture>
+        <a class="promo__button button" href="form.html">Подобрать программу
+        </a>
+      </div>
+    </section>
     <div class="catalog-products">
       <section class="programs">
-        <img class="programs__image image" src="./img/cat_black.svg" width="50" height="53" alt="Изображение кошки">
-        <h2 class="programs__subtitle subtitle">Похудение</h2>
-        <p class="programs__description description">Ваш кот весит больше собаки и <br> почти утратил способность лазить
-          <br> по деревьям?
-          Пора на диету! Cat <br> Energy Slim поможет вашему <br> питомцу сбросить лишний вес.
+        <h2 class="programs__subtitle programs__subtitle-cat-black subtitle">Похудение</h2>
+        <p class="programs__description description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+          Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
         </p>
-        <a class="programs__link arrow-right-link" href="catalog.html">каталог slim</a>
+        <a class="arrow-link programs__link" href="catalog.html">
+            каталог slim
+        </a>
       </section>
       <section class="programs">
-        <img class="programs__image image" src="./img/tiger-icon.svg" width="50" height="50" alt="Изображение тигра">
         <h2 class="programs__subtitle subtitle">Набор массы</h2>
-        <p class="programs__description description">Заработать авторитет среди <br> дворовых котов и даже собак?<br>
-          Серия Cat Energy Pro поможет <br> вашему коту нарастить <br> необходимые мышцы!
+        <p class="programs__description description">Заработать авторитет среди дворовых котов и даже собак?
+          Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
         </p>
-        <a class="programs__link arrow-right-link" href="catalog.html">каталог pro</a>
+        <a class="arrow-link programs__link" href="catalog.html">
+          каталог pro</a>
       </section>
     </div>
     <div class="box">
       <h2 class="box__title title">Как это работает</h2>
       <ol class="box__list list">
-        <li class="box__item item">
+        <li class="box__item box__item-nutrients">
           <img class="health-image" src="#" width="" height="" alt="">
-          <p class="box__item-description">Функциональное питание<br>
-            содержит только полезные<br>
+          <p class="box__item-description">Функциональное питание
+            содержит только полезные
             питательные вещества.
           </p>
         </li>
-        <li class="box__item item">
+        <li class="box__item box__item-composition">
           <img class="health-image" src="#" width="" height="" alt="">
-          <p class="box__item-description">Выпускается в виде порошка,<br>
-            который нужно лишь залить<br>
+          <p class="box__item-description">Выпускается в виде порошка,
+            который нужно лишь залить
             кипятком и готово.
           </p>
         </li>
-        <li class="box__item item">
+        <li class="box__item box__item-meal">
           <img class="health-image" src="#" width="" height="" alt="">
-          <p class="box__item-description">Замените один-два приема<br>
-            обычной еды на наше<br>
+          <p class="box__item-description">Замените один-два приема
+            обычной еды на наше
             функциональное питание.
           </p>
         </li>
-        <li class="box__item item">
+        <li class="box__item box__item-date">
           <img class="health-image" src="#" width="" height="" alt="">
-          <p class="box__item-description">Уже через месяц<br> наслаждайтесь
-            изменениями <br> к лучшему
+          <p class="box__item-description">Уже через месяц наслаждайтесь
+            изменениями к лучшему
             вашего питомца!
           </p>
         </li>
@@ -121,13 +120,13 @@
         </p>
       </div>
       <dl class="advantages-wrapper">
-        <div class="advantages-card">
-          <dt class="advantages-card__text">Снижение веса</dt>
-          <dd class="advantages-card__parametr">5кг</dd>
+        <div class="advantages-card-weight">
+          <dt class="advantages-card-weight__parametr">5кг</dt>
+          <dd class="advantages-card-weight__text">Снижение веса</dd>
         </div>
-        <div class="advantages-card">
-          <dt class="advantages-card__text">Затрачено времени</dt>
-          <dd class="advantages-card__parametr">60 дней</dd>
+        <div class="advantages-card-days">
+          <dt class="advantages-card-days__parametr">60 дней</dt>
+          <dd class="advantages-card-days__text">Затрачено времени</dd>
         </div>
         <div class="advantages-price">
           <dt class="advantages-price__text">
@@ -139,7 +138,8 @@
         </div>
       </dl>
       <div class="before-after-wrapper">
-        <img class="cat-before" src="./img/cat-before.png" width="280" height="232" alt="Кот до и после">
+        <img class="cat-before" src="./img/tablet-cat-before.png" width="100%" height="100%" alt="Изображение кота до">
+        <!-- <img class="cat-after" src="./img/tablet-cat-after.png" width="100%" height="100%" alt="Изображение кота после"> -->
         <div class="range-scale">
           <div class="range-bar">
             <span class="before">было</span>

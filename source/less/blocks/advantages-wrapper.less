@@ -1,9 +1,9 @@
 .advantages-wrapper {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 32px;
-  margin: 0;
+  gap: 20px 32px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -11,40 +11,160 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 32px 20px;
+    margin: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .advantages-wrapper {
+    column-gap: 42px;
     grid-column: 1/2;
     grid-row: 2/2;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
-.advantages-card__text {
-  font-family: @main-font;
+.advantages-card-weight {
+  position: relative;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  min-width: 122px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-card-weight {
+    height: 70px;
+    min-width: 162px;
+  }
+}
+
+.advantages-card-days {
+  position: relative;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  min-width: 122px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-card-days {
+    height: 70px;
+    min-width: 162px;
+  }
+}
+
+.advantages-card-weight__text {
+  position: absolute;
+  inset: calc(100% - 0.4em) 0 auto;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
+  line-height: 100%;
   color: #444444;
   margin: 0;
-  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #eaeaea;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.advantages-card__parametr {
+@media (min-width: @tablet-width) {
+  .advantages-card-weight__text {
+    background-color: #ffffff;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 14px;
+    inset: calc(100% - 0.6em) 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-card-weight__text {
+    background-color: #f2f2f2;
+  }
+}
+
+.advantages-card-days__text {
+  position: absolute;
+  bottom: -19px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #444444;
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #eaeaea;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-card-days__text {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+    margin-left: 5px;
+    margin-right: 5px;
+    left: 8px;
+    bottom: -8px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-card-days__text {
+    background-color: #f2f2f2;
+  }
+}
+
+.advantages-card-weight__parametr {
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   margin: 0;
-  padding: 0;
+  padding: 14px 42px 7px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-card-weight__parametr {
+    padding: 15px 57px 11px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.advantages-card-days__parametr {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0;
+  padding: 14px 23px 9px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-card-days__parametr {
+    font-size: 30px;
+    line-height: 37px;
+    margin: 0;
+    padding: 11px 30px 11px;
+  }
 }
 
 .advantages-price {
   display: flex;
   text-transform: uppercase;
   line-height: 20px;
+  padding: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -57,6 +177,8 @@
 @media (min-width: @desktop-width) {
   .advantages-price {
     flex-direction: row;
+    padding: 0;
+    padding-top: 55px;
   }
 }
 
@@ -77,5 +199,11 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-price__cost {
+    margin-left: 63px;
   }
 }

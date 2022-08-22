@@ -1,6 +1,6 @@
 .example {
   background-color: #eaeaea;
-  padding: 10px var(--side-offset) 20px;
+  padding: 43px var(--side-offset) 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -25,6 +25,7 @@
   line-height: 40px;
   font-weight: 400;
   margin: 0;
+  padding-bottom: 40px;
 }
 
 @media (min-width: @tablet-width) {
@@ -41,15 +42,24 @@
     grid-column: 1 / 2;
     grid-row: 1 / 4;
     padding: 0;
+    padding-bottom: 116px;
     margin: 0;
   }
+}
+
+.example__description {
+  padding-bottom: 20px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
 }
 
 @media (min-width: @tablet-width) {
   .example__description {
     text-align: justify;
     margin: 0;
-    margin-bottom: 54px;
+    padding-bottom: 54px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -61,6 +71,6 @@
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     padding-top: 30px;
-    margin: 0;
+    max-width: 403px;
   }
 }

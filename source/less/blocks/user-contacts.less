@@ -1,17 +1,31 @@
 .user-contacts {
+  position: relative;
   margin: 0;
-  padding: 29px var(--side-offset) 23px;
-}
+  padding: 0 var(--side-offset) 23px;
+  z-index: 1;
 
-@media (min-width: @tablet-width) {
-  .user-contacts {
-    padding: 71px var(--side-offset) 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    border: 2px solid #68b738;
+    width: 85%;
+    right: 1px;
+    top: 43px;
+    z-index: -1;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .user-contacts {
-    padding: 69px var(--side-offset) 24px;
+  @media (min-width: @tablet-width) {
+    padding: 71px var(--side-offset) 20px;
+
+    &::before {
+      top: 121px;
+      width: 100%;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 69px var(--side-offset) 24px;
+    }
   }
 }
 
@@ -20,13 +34,28 @@
   font-size: 24px;
   line-height: 26px;
   margin: 0;
-  margin-bottom: 69px;
-}
+  padding: 29px 14px 20px 0;
+  width: 65%;
+  background-color: #ffffff;
 
-@media (min-width: @tablet-width) {
-  .user-contacts__title {
+
+  @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin: 0 auto;
+    margin-left: -27px;
+    padding-bottom: 76px;
+    width: 85%;
+    background-color: #ffffff;
+    padding-left: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 45%;
+    background-color: #ffffff;
+    padding-left: 10px;
+    padding-bottom: 76px;
+    text-align: center;
   }
 }
 
@@ -39,7 +68,6 @@
   }
 }
 
-
 .form-input__place {
   border: 1px solid #cdcdcd;
   padding: 13px 15px;
@@ -49,6 +77,31 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+}
+
+.form-input__place:hover {
+  border: 1px solid #cdcdcd;
+  box-shadow: 2px 2px 5px #cdcdcd;
+}
+
+.form-input__place:focus {
+  outline: 1px solid #cdcdcd;
+  box-shadow: 2px 2px 5px #cdcdcd;
+}
+
+.form-input__place:active {
+  outline: 1px solid #444444;
+  box-shadow: -2px 2px 5px #444444;
+}
+
+.form-input__place:invalid {
+  outline: 2px solid #ff8282;
+  box-shadow: -2px 2px 5px #ff8282;
+}
+
+.form-input__place:valid {
+  border: 1px solid #e7e7e7;
+  box-shadow: -2px 2px 5px #e7e7e7;
 }
 
 @media (min-width: @tablet-width) {
