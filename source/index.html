@@ -6,17 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon-32x32.png">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <header class="header">
-      <a class="header__logo logo" href="index.html">
-        <img src="./img/index-logo.svg" width="33" height="37" alt="Логотип cat energy">
-      </a>
-      <a class="header__logo-cat logo-cat">
-        <img src="./img/logo-cat-energy.svg" width="101" height="18" alt="Cat enegry">
-      </a>
+    <a class="main-header__logo-image">
+      <img src="./img/index-logo.svg" width="33" height="37" alt="Логотип cat energy">
+    </a>
+    <a class="main-header__logo-cat-energy">
+      <img src="./img/logo-cat-energy.svg" width="101" height="18" alt="Cat enegry">
+    </a>
     <nav class="main-nav main-nav--closed">
       <!-- <button class="main-nav__toggle" type="button">
         <span class="page__hidden"> Открыть меню
@@ -52,7 +54,9 @@
           Занялся собой?Займись котом!
         </p>
         <picture class="promo__picture">
-          <img src="../img/mobile-cat-energy-pro.png" width="280" height="270" alt="Cat energy pro со вкусом курицы">
+          <!-- <source media="(min-width: 1200px)" srcset="./img/index-can-desktop.jpg , ./img/index-can-desktop@2x.jpg 2x"> -->
+          <!-- <source media="(min-width: 768px)" srcset="./img/index-can-tablet.jpg , ./img/index-can-tablet@2x.jpg 2x"> -->
+          <img src="./img/index-can-mobile.png" srcset="./img/index-can-mobile@2x.png 2x" alt="Cat energy pro со вкусом курицы">
         </picture>
         <a class="promo__button button" href="form.html">Подобрать программу
         </a>
