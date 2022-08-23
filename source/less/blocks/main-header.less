@@ -53,6 +53,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .site-list__item--white a {
+    color: #ffffff;
+  }
+}
+
 .site-list__item a:hover {
   opacity: 0.6;
 }
@@ -78,6 +84,13 @@
     bottom: -10px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .site-list__item--current::before {
+    background-color: #ffffff;
+  }
+}
+
 
 @media (min-width: @desktop-width) {
   .site-list__item {

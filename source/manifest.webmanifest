@@ -3,5 +3,9 @@
     { "src": "img/favicons/favicon-16x16.png", "type": "image/png", "sizes": "16x16" },
     { "src": "img/favicons/favicon-32x32.png", "type": "image/png", "sizes": "32x32" },
     { "src": "img/favicons/favicon-152x152.png", "type": "image/png", "sizes": "152x152" }
-  ]
+  ],
+
+  "short_name": "Кэт Энерджи",
+  "name": "Проект Кэт Энерджи",
+  "description": "сайт моего кота про набор массы или похудение"
 }

@@ -13,14 +13,19 @@
     justify-content: space-around;
     align-items: center;
     border: none;
-    padding-top: 20px;
+    padding: 24px var(--side-offset) 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .header {
-    height: 100px;
+  .header--desktop {
     padding: 53px var(--side-offset) 20px;
+    position: absolute;
+    width: 100%;
+    max-width: 1220px;
+    top: 0;
+    z-index: 1;
+    background-color: transparent;
   }
 }
 
