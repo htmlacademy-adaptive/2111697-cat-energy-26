@@ -120,6 +120,7 @@
 }
 
 .form-input__email {
+  position: relative;
   display: grid;
   grid-template-columns: 50px minmax(219px, 1fr);
   align-items: center;
@@ -130,6 +131,12 @@
   color: #444444;
   text-transform: uppercase;
   width: 100%;
+}
+
+.form-input__icon-email {
+  position: absolute;
+  content: "";
+  right: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -150,6 +157,7 @@
 }
 
 .form-input__tel {
+  position: relative;
   display: grid;
   grid-template-columns: 68px minmax(204px, 1fr);
   gap: 8px;
@@ -159,6 +167,11 @@
   align-items: center;
   text-transform: uppercase;
   width: 100%;
+}
+
+.form-input__icon-telephone {
+  position: absolute;
+  right: 20px;
 }
 
 @media (min-width: @tablet-width) {
