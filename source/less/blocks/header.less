@@ -1,4 +1,7 @@
 .header {
+  display: flex;
+  position: relative;
+  align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
   margin: 0;
@@ -10,11 +13,42 @@
   .header {
     height: 56px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     border: none;
     padding: 24px var(--side-offset) 30px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("/img/logo-tablet.svg");
+      background-repeat: no-repeat;
+      width: 174px;
+      height: 52px;
+      top: 25px;
+      left: 30px;
+
+      @media (min-width: @desktop-width) {
+        position: absolute;
+        content: "";
+        background-image: url("/img/logo-desktop.svg");
+        width: 202px;
+        height: 59px;
+        top: 49px;
+        left: 110px;
+      }
+    }
   }
+}
+
+.header:hover&::before {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.header:active&::before {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 @media (min-width: @desktop-width) {
@@ -29,17 +63,9 @@
   }
 }
 
-.header__logo {
-  text-decoration: none;
-
-
-  @media (min-width: @tablet-width) {
-    height: 60px;
-    align-self: baseline;
-  }
-
-
-  @media (min-width: @desktop-width) {
-    align-self: center;
+@media (min-width: @tablet-width) {
+  .main-header__logo-cat-energy,
+  .main-header__logo-image {
+    display: none;
   }
 }

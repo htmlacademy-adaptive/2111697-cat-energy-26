@@ -1,6 +1,8 @@
 .container-gift {
-  flex-direction: column;
+  position: relative;
   display: flex;
+  align-items: flex-end;
+  justify-content: center;
   padding: 20px 20px 35px;
   color: #ffffff;
   background-color: @accent-colors;
@@ -15,11 +17,32 @@
   margin-top: 35px;
   width: 240px;
   height: 234px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-gift.svg");
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 82px;
+    top: 56px;
+
+    @media (min-width: @tablet-width) {
+      left: 86px;
+      top: 100px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 65px;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
   .container-gift {
     width: 94.5%;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
@@ -42,4 +65,14 @@
   text-align: center;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    margin-right: 124px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    margin: 0 auto;
+  }
 }

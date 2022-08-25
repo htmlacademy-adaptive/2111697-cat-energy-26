@@ -1,46 +1,53 @@
 .form-header {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
-  height: 66px;
   background-color: #ffffff;
   margin: 0;
   border-bottom: 1px solid #d9d9d9;
-  --side-offset: 20px;
+  padding: 10px var(--side-offset) 20px;
 
   @media (min-width: @tablet-width) {
-    --side-offset: 70px;
-  }
-
-  @media (min-width: @desktop-width) {
-    @half-width:(@container-max-width / 2);
-    --side-offset: calc(50vw - @half-width);
-  }
-}
-
-
-@media (min-width: @tablet-width) {
-  .form-header {
-    height: 76px;
+    height: 56px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     border: none;
-    padding: 25px var(--side-offset) 20px;
+    padding: 24px var(--side-offset) 30px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("/img/logo-tablet.svg");
+      background-repeat: no-repeat;
+      width: 174px;
+      height: 52px;
+      top: 25px;
+      left: 30px;
+
+      @media (min-width: @desktop-width) {
+        background-image: url("/img/logo-desktop.svg");
+        width: 202px;
+        height: 59px;
+        left: 110px;
+        top: 52px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 54px var(--side-offset) 20px;
+      justify-content: flex-end;
+    }
   }
 }
 
-@media (min-width: @desktop-width) {
-  .form-header {
-    padding: 54px var(--side-offset) 20px;
-    height: 100px;
-    justify-content: space-around;
-  }
+.form-header:hover&::before {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-.header__logo {
-  text-decoration: none;
-}
-
-@media (min-width: @desktop-width) {
-  .header__logo {
-    height: 60px;
-  }
+.form-header:active&::before {
+  opacity: 0.6;
+  cursor: pointer;
 }
