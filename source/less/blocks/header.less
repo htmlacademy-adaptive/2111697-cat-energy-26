@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   background-color: #ffffff;
   margin: 0;
   border-bottom: 1px solid #d9d9d9;
@@ -17,38 +17,7 @@
     align-items: center;
     border: none;
     padding: 24px var(--side-offset) 30px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      background-image: url("/img/logo-tablet.svg");
-      background-repeat: no-repeat;
-      width: 174px;
-      height: 52px;
-      top: 25px;
-      left: 30px;
-
-      @media (min-width: @desktop-width) {
-        position: absolute;
-        content: "";
-        background-image: url("/img/logo-desktop.svg");
-        width: 202px;
-        height: 59px;
-        top: 49px;
-        left: 110px;
-      }
-    }
   }
-}
-
-.header:hover&::before {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-.header:active&::before {
-  opacity: 0.6;
-  cursor: pointer;
 }
 
 @media (min-width: @desktop-width) {
@@ -63,9 +32,65 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .main-header__logo-cat-energy,
-  .main-header__logo-image {
+.header__logo {
+  background-image: url("/img/logo-mobile.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 38px;
+  left: 23px;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("/img/logo-tablet.svg");
+    background-repeat: no-repeat;
+    width: 174px;
+    height: 52px;
+    left: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    content: "";
+    background-image: url("/img/logo-desktop.svg");
+    width: 202px;
+    height: 59px;
+    top: 51px;
+    left: 122px;
+  }
+}
+
+.header__cat-energy {
+  background-image: url("/img/cat-energy-mobile.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  content: "";
+  width: 101px;
+  height: 20px;
+  left: 75px;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
