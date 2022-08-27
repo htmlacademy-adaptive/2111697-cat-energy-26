@@ -25,10 +25,12 @@
   </svg>
   <header class="main-header">
     <a class="main-header__logo">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg , img/logo-desktop@2x.svg 2x" width="202" height="59">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg , img/logo-tablet@2x.svg 2x" width="174" height="51">
+        <img class="main-header__logo-image" src="img/header-logo-mobile.svg" width="191" height="38" srcset="img/header-logo-mobile@2x.svg 2x" alt="Логотип Кэт Энерджи">
+      </picture>
       <span class="page__hidden">Логотип сайта Кэт Энерджи</span>
-    </a>
-    <a class="main-header__cat-energy">
-      <span class="page__hidden">Надпись Кэт Энерджи</span>
     </a>
     <nav class="main-nav">
       <a class="main-nav__toggle" href="#">

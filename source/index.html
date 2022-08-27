@@ -25,10 +25,12 @@
   </svg>
   <header class="header header--desktop">
     <a class="header__logo">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg , img/logo-desktop@2x.svg 2x" width="202" height="59">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg , img/logo-tablet@2x.svg 2x" width="174" height="51">
+        <img class="header__logo-image" src="img/header-logo-mobile.svg" width="191" height="38" srcset="img/header-logo-mobile@2x.svg 2x" alt="Логотип Кэт Энерджи">
+      </picture>
       <span class="page__hidden">Логотип сайта Кэт Энерджи</span>
-    </a>
-    <a class="header__cat-energy">
-      <span class="page__hidden">Надпись Кэт Энерджи</span>
     </a>
     <nav class="main-nav main-nav--closed">
       <!-- <button class="main-nav__toggle" type="button">
@@ -150,15 +152,12 @@
         </div>
       </dl>
       <div class="before-after-wrapper">
-        <img class="cat-before" src="./img/tablet-cat-before.png" width="100%" height="100%" alt="Изображение кота до">
-        <!-- <img class="cat-after" src="./img/tablet-cat-after.png" width="100%" height="100%" alt="Изображение кота после"> -->
+        <div class="cat cat-before">
+        </div>
+        <div class="cat cat-after">
+        </div>
         <div class="range-scale">
-          <div class="range-bar">
-            <span class="before">было</span>
-            <button class="range-toggle" type="button">
-            </button>
-            <span class="after">стало</span>
-          </div>
+          <div class="range-bar"></div>
         </div>
       </div>
     </section>
