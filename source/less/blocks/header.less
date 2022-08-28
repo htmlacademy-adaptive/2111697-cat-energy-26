@@ -1,4 +1,7 @@
 .header {
+  display: flex;
+  position: relative;
+  align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
   margin: 0;
@@ -8,28 +11,32 @@
 
 @media (min-width: @tablet-width) {
   .header {
-    height: 56px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     border: none;
-    padding-top: 20px;
+    padding: 42px var(--side-offset) 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .header {
-    height: 100px;
-    padding: 53px var(--side-offset) 20px;
+  .header--desktop {
+    padding: 69px var(--side-offset) 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: transparent;
+
+    --current-color: #ffffff;
   }
 }
 
-.header__logo {
-  text-decoration: none;
-}
+.header__logo-image {
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 
-@media (min-width: @desktop-width) {
-  .header__logo {
-    height: 60px;
+  &:active {
+    opacity: 0.6;
+    cursor: pointer;
   }
 }

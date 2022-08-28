@@ -7,18 +7,17 @@
 @media (min-width: @tablet-width) {
   .card-more {
     border: 2px solid #f2f2f2;
-    height: 339px;
-    padding: 41px 20px 25px;
+    padding: 77px 20px 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    height: 429px;
   }
 
   @media (min-width: @desktop-width) {
     .card-more {
-      height: 336px;
-      padding: 51px 20px 41px;
+      padding: 51px 38px 41px;
       justify-content: space-between;
     }
   }
@@ -99,16 +98,20 @@
   line-height: 20px;
   color: #111111;
   margin: 0;
-  padding-top: 23px;
+  margin-top: 53px;
   text-transform: uppercase;
-}
 
-@media (min-width: @tablet-width) {
-  .card-more__heading {
+  @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 20px;
     line-height: 22px;
     padding: 0;
+    margin-top: 75px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 86px;
   }
 }
 
@@ -120,22 +123,24 @@
   line-height: 16px;
   color: #444444;
   margin: 0;
-}
+  margin-top: 8px;
 
-@media (min-width: @tablet-width) {
-  .card-more__text {
-    font-weight: 400;
+  @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 18px;
     width: 167px;
+    margin-bottom: 94px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 73px;
+    margin-top: 0;
   }
 }
 
 @media (min-width: @tablet-width) {
   .card-more__link {
     line-height: 0px;
-    padding-top: 49px;
-    padding-bottom: 20px;
     background-color: #ffffff;
     width: 134px;
   }
@@ -169,8 +174,8 @@
 
 @media (min-width: @tablet-width) {
   .card-more__link-button {
-    max-width: 249px;
     display: flex;
     align-items: flex-end;
+    margin: 0;
   }
 }
