@@ -1,16 +1,16 @@
 .header {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
   background-color: #ffffff;
   margin: 0;
   border-bottom: 1px solid #d9d9d9;
-  padding: 10px var(--side-offset) 20px;
 }
 
 @media (min-width: @tablet-width) {
   .header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     border: none;
     padding: 42px var(--side-offset) 30px;
   }
@@ -27,6 +27,10 @@
 
     --current-color: #ffffff;
   }
+}
+
+.header__logo-wrapper {
+  padding: 10px var(--side-offset) 20px;
 }
 
 .header__logo-image {
