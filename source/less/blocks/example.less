@@ -1,13 +1,12 @@
 .example {
   background-color: #eaeaea;
   padding: 43px var(--side-offset) 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .example {
-    background-color: #ffffff;
+  @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
+    border-top: 1px solid #e7e7e7;
+    background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 60%, #eaeaea 0%);
   }
 }
 
@@ -17,6 +16,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 23%, #eaeaea 0%);
   }
 }
 
