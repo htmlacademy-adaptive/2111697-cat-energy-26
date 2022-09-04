@@ -3,17 +3,13 @@
   padding-top: 27px;
   padding-left: 25px;
   padding-bottom: 25px;
-}
 
-@media (min-width: @tablet-width) {
-  .wrapper-checkbox {
+  @media (min-width: @tablet-width) {
     margin-top: 72px;
     border: 1px solid #d9d9d9;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .wrapper-checkbox {
+  @media (min-width: @desktop-width) {
     margin: 0;
     border: 1px solid #d9d9d9;
   }
@@ -23,10 +19,14 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 17px;
+  }
 }
 
 .wrapper-checkbox__form-item:not(:last-of-type) {
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .form-label {
@@ -35,7 +35,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
-  padding-bottom: 40px;
+  cursor: pointer;
 }
 
 .control {
@@ -64,4 +64,9 @@
   background-color: #68b738;
   right: 10px;
   bottom: 10px;
+}
+
+.control:hover .control-form {
+  border: 1px solid #bababa;
+  cursor: pointer;
 }

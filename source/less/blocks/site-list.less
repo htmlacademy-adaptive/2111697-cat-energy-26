@@ -41,8 +41,9 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .site-list__item--white a {
+
+.site-list__item--white a {
+  @media (min-width: @desktop-width) {
     color: #ffffff;
   }
 
@@ -68,3 +69,12 @@
     }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .site-list__item--desktop {
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+}
+
