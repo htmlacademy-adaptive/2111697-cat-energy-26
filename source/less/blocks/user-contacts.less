@@ -4,7 +4,6 @@
   padding: 0 var(--side-offset) 23px;
   z-index: 1;
 
-
   &::before {
     position: absolute;
     content: "";
@@ -37,7 +36,6 @@
   padding: 29px 14px 20px 0;
   width: 70%;
   background-color: #ffffff;
-
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -99,9 +97,24 @@
   box-shadow: -2px 2px 5px #ff8282;
 }
 
+.form-input__place:invalid + .form-input__icon-email {
+  color: #ff8282;
+}
+
+.form-input__place:invalid + .form-input__icon-telephone {
+  color: #ff8282;
+}
+
+.form-input__place:valid + .form-input__icon-email {
+  color: #68b738;
+}
+
+.form-input__place:valid + .form-input__icon-telephone {
+  color: #68b738;
+}
+
 .form-input__place:valid {
-  border: 1px solid #e7e7e7;
-  box-shadow: -2px 2px 5px #e7e7e7;
+  outline: 2px solid #444444;
 }
 
 @media (min-width: @tablet-width) {
