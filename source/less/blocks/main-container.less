@@ -54,6 +54,7 @@
     background-image: none;
     padding: 32px calc(var(--side-offset) + 40px) 526px;
     position: relative;
+    border-top: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -149,23 +150,21 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .promo__image {
+.promo__image {
+  @media (min-width: @tablet-width) {
     position: absolute;
     height: 609px;
     width: auto;
     bottom: 1px;
     right: -2px;
     z-index: -1;
-  }
-}
 
-@media (min-width: @desktop-width) {
-  .promo__image {
-    height: auto;
-    width: 552px;
-    z-index: 1;
-    right: 327px;
-    top: 145px;
+    @media (min-width: @desktop-width) {
+      height: auto;
+      width: 552px;
+      z-index: 1;
+      right: 327px;
+      top: 145px;
+    }
   }
 }

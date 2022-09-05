@@ -3,7 +3,6 @@
   margin: 0;
   padding: 22px var(--side-offset) 20px;
 
-
   &::before {
     position: absolute;
     content: "";
@@ -25,7 +24,6 @@
 .extra-wrapper__list {
   display: grid;
   grid-template-columns: 1fr;
-
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -65,70 +63,44 @@
   }
 }
 
-.extra-wrapper__label > input {
+.extra-wrapper__label {
+  margin-bottom: 35px;
+  position: relative;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.extra-wrapper__mark {
   position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.extra-wrapper__label > span {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-  margin-bottom: 10px;
-}
-
-.extra-wrapper__label > span::before {
   content: "";
-  width: 1.87em;
-  height: 1.87em;
-  flex-shrink: 0;
-  flex-grow: 0;
+  width: 30px;
+  height: 30px;
   border: 1px solid #cdcdcd;
-  margin-right: 0.5em;
-  background-repeat: no-repeat;
-  background-position: center center;
+  top: 0;
+  left: 0;
 }
 
-// hover
-.extra-wrapper__label > input:not(:disabled):not(:checked) + span:hover::before {
-  border-color: #bababa;
-  box-shadow: -1px 1px 5px #bababa;
+.checkbox__input + .extra-wrapper__mark::before {
+  content: url("/img/other-icon/checkmark.svg");
 }
 
-// active
-.extra-wrapper__label > input:not(:disabled):active + span::before {
-  box-shadow: -1px 1px 5px #bababa;
-}
-
-//focus
-.extra-wrapper__label > input:focus + span::before {
-  box-shadow: 0 0 0 0.2rem rgba(186, 186, 186, 0.25);
-}
-
-.extra-wrapper__label > input:focus:not(:checked) + span::before {
-  border-color: #68b738;
-}
-
-.extra-wrapper__label > input:checked + span::before {
-  background-image: url("/img/icon/tick.svg");
-}
-
-// disabled
-.extra-wrapper__label > input:disabled + span {
-  color: #000000;
-  opacity: 0.3;
+.checkbox__input[type="checkbox"]:checked + .extra-wrapper__mark::before {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .extra-wrapper__name {
+  margin-left: 50px;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-}
 
-@media (min-width: @tablet-width) {
-  .extra-wrapper__name {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
@@ -138,10 +110,8 @@
   padding: 10px 44px;
   margin-bottom: 28px;
   margin-top: 21px;
-}
 
-@media (min-width: @tablet-width) {
-  .extra-wrapper__button-large {
+  @media (min-width: @tablet-width) {
     padding: 13px 45px;
     border: none;
     font-size: 20px;
@@ -149,10 +119,8 @@
     width: 282px;
     height: 52px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .extra-wrapper__button-large {
+  @media (min-width: @desktop-width) {
     padding: 13px 188px;
     min-width: 568px;
   }
@@ -166,10 +134,8 @@
   line-height: 16px;
   justify-content: center;
   display: flex;
-}
 
-@media (min-width: @desktop-width) {
-  .extra-wrapper__important {
+  @media (min-width: @desktop-width) {
     grid-column: 3 /4;
   }
 }

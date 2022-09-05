@@ -1,10 +1,8 @@
 .header {
   background-color: #ffffff;
   margin: 0;
-}
 
-@media (min-width: @tablet-width) {
-  .header {
+  @media (min-width: @tablet-width) {
     display: flex;
     position: relative;
     align-items: center;
@@ -12,6 +10,10 @@
     justify-content: space-between;
     border: none;
     padding: 42px var(--side-offset) 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 69px var(--side-offset) 30px;
   }
 }
 

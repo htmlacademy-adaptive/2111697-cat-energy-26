@@ -2,10 +2,8 @@
   padding: 25px 20px 25px;
   text-align: center;
   border-bottom: 1px solid #ebebeb;
-}
 
-@media (min-width: @tablet-width) {
-  .card-more {
+  @media (min-width: @tablet-width) {
     border: 2px solid #f2f2f2;
     padding: 77px 20px 25px;
     display: flex;
@@ -16,10 +14,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    .card-more {
-      padding: 51px 38px 41px;
-      justify-content: space-between;
-    }
+    padding: 51px 38px 41px;
+    justify-content: space-between;
   }
 }
 
@@ -40,55 +36,39 @@
     opacity: 0.5;
     cursor: pointer;
   }
-}
 
-
-.card-more__link::before {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 2px;
-  background-color: #d3d3d3;
-  right: -14px;
-  top: -38px;
-  transform: rotate(90deg);
-}
-
-
-@media (min-width: @tablet-width) {
-  .card-more__link::before {
+  &::before {
     position: absolute;
     content: "";
-    width: 60px;
+    width: 30px;
     height: 2px;
     background-color: #d3d3d3;
-    right: 41px;
-    top: 6px;
+    right: -14px;
+    top: -38px;
     transform: rotate(90deg);
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      right: 41px;
+      top: 6px;
+    }
   }
-}
 
-.card-more__link::after {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 2px;
-  background-color: #d3d3d3;
-  right: -14px;
-  transform: rotate(180deg);
-  top: -38px;
-}
-
-@media (min-width: @tablet-width) {
-  .card-more__link::after {
+  &::after {
     position: absolute;
     content: "";
-    width: 60px;
+    width: 30px;
     height: 2px;
     background-color: #d3d3d3;
-    right: 41px;
+    right: -14px;
     transform: rotate(180deg);
-    top: 6px;
+    top: -38px;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      right: 41px;
+      top: 6px;
+    }
   }
 }
 
@@ -159,21 +139,20 @@
     box-shadow: -3px 3px 5px #cbcbcb;
   }
 
-  &:active {
-    background-color: #ebebeb;
-    color: rgba(68, 68, 68, 0.3);
-    box-shadow: -3px 3px 5px #cbcbcb;
-  }
 
   &:focus {
     background-color: #ebebeb;
     color: #444444;
     box-shadow: -3px 3px 5px #cbcbcb;
   }
-}
 
-@media (min-width: @tablet-width) {
-  .card-more__link-button {
+  &:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 30%);
+    box-shadow: -3px 3px 5px #cbcbcb;
+  }
+
+  @media (min-width: @tablet-width) {
     display: flex;
     align-items: flex-end;
     margin: 0;
