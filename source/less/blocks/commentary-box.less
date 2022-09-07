@@ -7,7 +7,8 @@
   &::before {
     position: absolute;
     content: "";
-    border: 2px solid #68b738;
+    height: 2px;
+    background-color: @accent-colors;
     width: 85%;
     top: 15px;
     right: 0;
@@ -65,7 +66,11 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  color: #444444;
+  color: @dark-colors;
+
+  &:hover {
+    border: 1px solid @states-colors;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

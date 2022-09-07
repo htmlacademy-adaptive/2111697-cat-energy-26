@@ -6,7 +6,8 @@
   &::before {
     position: absolute;
     content: "";
-    border: 2px solid #68b738;
+    height: 2px;
+    background-color: @accent-colors;
     top: 35px;
     width: 80%;
     right: 1px;
@@ -78,19 +79,31 @@
   content: "";
   width: 30px;
   height: 30px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @states-colors;
   top: 0;
   left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
-.checkbox__input + .extra-wrapper__mark::before {
-  content: url("/img/other-icon/checkmark.svg");
-}
-
-.checkbox__input[type="checkbox"]:checked + .extra-wrapper__mark::before {
+.extra-wrapper__input:checked + .extra-wrapper__mark::before {
   position: absolute;
-  top: 0;
-  right: 0;
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-image: url("/img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 1px;
+  left: 1px;
+
+  @media (min-width: @tablet-width) {
+    top: 4px;
+    left: 5px;
+  }
 }
 
 .extra-wrapper__name {
@@ -139,3 +152,17 @@
     grid-column: 3 /4;
   }
 }
+
+.extra-wrapper__input:hover + .extra-wrapper__mark {
+  border: 1px solid #bababa;
+}
+
+.extra-wrapper__input:hover ~ .extra-wrapper__name {
+  opacity: 0.7;
+}
+
+.extra-wrapper__input:disabled + .extra-wrapper__mark,
+.extra-wrapper__input:disabled ~ .extra-wrapper__name {
+  opacity: 0.3;
+}
+

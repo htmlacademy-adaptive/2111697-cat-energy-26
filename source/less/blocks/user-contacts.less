@@ -7,7 +7,8 @@
   &::before {
     position: absolute;
     content: "";
-    border: 2px solid #68b738;
+    height: 2px;
+    background-color: @accent-colors;
     width: 85%;
     right: 1px;
     top: 43px;
@@ -64,122 +65,4 @@
     gap: 80px;
     align-items: center;
   }
-}
-
-.form-input__place {
-  border: 1px solid #e7e7e7;
-  padding: 13px 15px;
-  font-family: @accent-font;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #444444;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 10px 10px;
-  }
-
-  &:hover {
-    border: 1px solid #cdcdcd;
-    box-shadow: 2px 2px 5px #cdcdcd;
-  }
-
-  &:focus {
-    outline: 2px solid #444444;
-    box-shadow: 2px 2px 5px #cdcdcd;
-  }
-
-  &:invalid {
-    outline: 2px solid #ff8282;
-    box-shadow: -2px 2px 5px #ff8282;
-  }
-}
-
-.form-input__place:focus + .form-input__icon-email {
-  color: #68b738;
-}
-
-.form-input__place:invalid + .form-input__icon-email {
-  color: #ff8282;
-}
-
-.form-input__place:focus + .form-input__icon-telephone {
-  color: #68b738;
-}
-
-.form-input__place:invalid + .form-input__icon-telephone {
-  color: #ff8282;
-}
-
-.form-input {
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-.form-input__email {
-  position: relative;
-  display: grid;
-  grid-template-columns: 50px minmax(219px, 1fr);
-  align-items: center;
-  gap: 11px;
-  margin-bottom: 14px;
-  font-size: 16px;
-  line-height: 18px;
-  color: #444444;
-  text-transform: uppercase;
-  width: 100%;
-}
-
-.form-input__icon-email {
-  position: absolute;
-  content: "";
-  right: 20px;
-
-  @media (min-width: @tablet-width) {
-    grid-template-columns: 64px minmax(219px, 1fr);
-    gap: 18px;
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    gap: 20px;
-    grid-template-columns: 63px minmax(219px, 1fr);
-    margin: 0;
-  }
-}
-
-.form-input__tel {
-  position: relative;
-  display: grid;
-  grid-template-columns: 68px minmax(204px, 1fr);
-  gap: 8px;
-  font-size: 16px;
-  line-height: 18px;
-  color: #444444;
-  align-items: center;
-  text-transform: uppercase;
-  width: 100%;
-
-  @media (min-width: @tablet-width) {
-    grid-template-columns: 84px minmax(204px, 1fr);
-    gap: 14px;
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-template-columns: 85px minmax(204px, 1fr);
-    gap: 15px;
-  }
-}
-
-.form-input__icon-telephone {
-  position: absolute;
-  right: 20px;
 }

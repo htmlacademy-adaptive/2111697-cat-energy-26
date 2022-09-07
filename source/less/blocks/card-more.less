@@ -23,7 +23,7 @@
   position: relative;
   text-decoration: none;
   background-color: #f2f2f2;
-  color: #444444;
+  color: @dark-colors;
   font-size: 16px;
   line-height: 20px;
 
@@ -101,7 +101,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #444444;
+  color: @dark-colors;
   margin: 0;
   margin-top: 8px;
 
@@ -131,25 +131,22 @@
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #f2f2f2;
-  color: #444444;
+  color: @dark-colors;
 
   &:hover {
     background-color: #ebebeb;
-    color: #444444;
-    box-shadow: -3px 3px 5px #cbcbcb;
+    color: @dark-colors;
   }
 
 
   &:focus {
     background-color: #ebebeb;
-    color: #444444;
-    box-shadow: -3px 3px 5px #cbcbcb;
+    color: @dark-colors;
   }
 
   &:active {
     background-color: #ebebeb;
     color: rgba(68, 68, 68, 30%);
-    box-shadow: -3px 3px 5px #cbcbcb;
   }
 
   @media (min-width: @tablet-width) {
