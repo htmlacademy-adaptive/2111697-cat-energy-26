@@ -4,12 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Функциональное питание для ваших кошек">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/favicon-152x152.png">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2"  type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -287,7 +290,7 @@
               <span class="extra-product__price">200 <abbr title="Рублей">Р.</abbr></span>
             </div>
             <div class="extra-product__button">
-              <button class="extra__button button" type="button">Заказать</button>
+              <button class="extra-product__button-long button" type="button">Заказать</button>
             </div>
           </div>
           <div class="extra-product__item">
@@ -297,7 +300,7 @@
               <span class="extra-product__price">200 <abbr title="Рублей">Р.</abbr></span>
             </div>
             <div class="extra-product__button">
-              <button class="extra__button button" type="button">Заказать</button>
+              <button class="extra-product__button-long button" type="button">Заказать</button>
             </div>
           </div>
           <div class="extra-product__item">
@@ -307,7 +310,7 @@
               <span class="extra-product__price">100 <abbr title="Рублей">Р.</abbr></span>
             </div>
             <div class="extra-product__button">
-              <button class="extra__button button" type="button">Заказать</button>
+              <button class="extra-product__button-long button" type="button">Заказать</button>
             </div>
           </div>
           <div class="extra-product__item">
@@ -317,7 +320,7 @@
               <span class="extra-product__price">300 <abbr title="Рублей">Р.</abbr></span>
             </div>
             <div class="extra-product__button">
-              <button class="extra__button button" type="button">Заказать</button>
+              <button class="extra-product__button-long button" type="button">Заказать</button>
             </div>
           </div>
         </div>
@@ -330,38 +333,38 @@
     </div>
   </section>
   <footer class="footer">
-    <address class="footer__contacts contacts">
-      <b class="contacts__title">Приглашаем <br>
+    <address class="footer__contacts">
+      <b class="footer__title">Приглашаем <br>
         к сотрудничеству <br>
         дилеров!</b>
-      <p class="contacts__text">ул. Большая <br>
+      <p class="footer__text">ул. Большая <br>
         Конюшенная, д. 19/8 <br>
         Санкт-Петербург</p>
     </address>
     <div class="footer-location">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021609819!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1660041843113!5m2!1sru!2sru" width="100%" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021609819!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1660041843113!5m2!1sru!2sru" width="100%" height="362" title="карта html academy" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <div class="footer-social social">
+    <div class="footer-social">
       <div class="footer-social__logo-cat-energy logo-cat-energy">
         <a class="logo-cat-energy-link" href="#">
           <img src="./img/footer-logo-cat-energy.svg" width="128" height="24" alt="Логотип cat energy">
         </a>
       </div>
-      <div class="social__list">
-        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-          <svg class="social__link-icon" width="28" height="22">
+      <div class="social-list">
+        <a class="social-list__link" href="https://vk.com/htmlacademy">
+          <svg class="social-list__icon" width="28" height="22">
             <use xlink:href="img/sprite.svg#vkontakte"></use>
           </svg>
           <span class="page__hidden">Мы в Вконтакте</span>
         </a>
-        <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-          <svg class="social__link-icon" width="28" height="22">
+        <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru">
+          <svg class="social-list__icon" width="28" height="22">
             <use xlink:href="img/sprite.svg#youtube"></use>
           </svg>
           <span class="page__hidden">Мы в Ютубе</span>
         </a>
-        <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-          <svg class="social__link-icon" width="28" height="22">
+        <a class="social-list__link" href="https://t.me/htmlacademy">
+          <svg class="social-list__icon" width="28" height="22">
             <use xlink:href="img/sprite.svg#telegram"></use>
           </svg>
           <span class="page__hidden">Мы в Телеграме</span>

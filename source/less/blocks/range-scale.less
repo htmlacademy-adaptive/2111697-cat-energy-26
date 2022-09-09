@@ -1,0 +1,56 @@
+
+.range-scale {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 256px;
+  border: 2px solid #666666;
+  border-radius: 4px;
+  top: 0;
+  right: 50%;
+  z-index: 100;
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+    width: 4px;
+  }
+}
+
+.range-scale:hover {
+  border: 2px solid @accent-colors;
+}
+
+.range-scale:hover .range-scale__bar {
+  border: 2px solid @accent-colors;
+}
+// НЕ ДОДЕЛАНО
+.range-scale:hover ~ .range-scale__bar-icon {
+  fill: @accent-colors;
+}
+
+.range-scale__bar {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 2px solid #666666;
+  border-radius: 20px;
+  background-color: #ffffff;
+  top: 108px;
+  right: -18px;
+
+  @media (min-width: @tablet-width) {
+    top: 46%;
+    right: -19px;
+  }
+}
+
+.range-scale__bar-icon {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 18px;
+  right: 6px;
+  top: 9px;
+  fill: #666666;
+}
