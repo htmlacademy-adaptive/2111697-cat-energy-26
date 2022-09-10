@@ -126,7 +126,7 @@
   font-size: 14px;
   line-height: 14px;
   color: @dark-colors;
-  width: 126px;
+  min-width: 126px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -216,12 +216,10 @@
 }
 
 .extra-product__button-long {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 20px;
 
   @media (min-width: @desktop-width) {
     height: 100%;
-    padding-left: 92px;
-    padding-right: 92px;
+    min-width: 244px;
   }
 }

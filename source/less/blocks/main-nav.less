@@ -33,10 +33,16 @@
     position: unset;
     flex-direction: row;
     gap: 20px;
+    max-width: 443px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: transparent;
+    max-width: 750px;
+
+    &--desktop {
+      max-width: 42vw;
+    }
   }
 }
 

@@ -10,12 +10,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 429px;
+    min-height: 430px;
+    min-width: 324px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 51px 38px 41px;
     justify-content: space-between;
+    min-width: 245px;
   }
 }
 
@@ -108,7 +110,7 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 18px;
-    width: 167px;
+    max-width: 167px;
     margin-bottom: 94px;
   }
 
@@ -128,8 +130,7 @@
 
 .card-more__link-button {
   margin-top: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 20px;
   background-color: #f2f2f2;
   color: @dark-colors;
 
@@ -153,5 +154,6 @@
     display: flex;
     align-items: flex-end;
     margin: 0;
+    max-width: 244px;
   }
 }

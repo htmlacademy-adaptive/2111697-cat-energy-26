@@ -40,6 +40,7 @@
     align-items: center;
     padding: 0;
     background-position: center 62%;
+    min-height: 200px;
   }
 
   @media (min-width: @desktop-width) {
@@ -47,6 +48,7 @@
     align-items: end;
     flex-direction: row;
     justify-content: center;
+    min-height: 288px;
   }
 }
 
@@ -59,17 +61,17 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  flex-basis: 75%;
 
   @media (min-width: @tablet-width) {
     text-align: left;
     margin-right: 124px;
-    margin-top: 71px;
-    margin-bottom: 69px;
+    flex-basis: 25%;
   }
 
   @media (min-width: @desktop-width) {
     text-align: center;
-    margin: 0 auto;
-    margin-bottom: 49px;
+    margin: 150px auto 49px;
+    flex-basis: 70%;
   }
 }
