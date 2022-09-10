@@ -1,10 +1,11 @@
 .example {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-color: #eaeaea;
   padding: 43px var(--side-offset) 20px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
     border-top: 1px solid #e7e7e7;
     background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 60%, #eaeaea 0%);
   }
@@ -43,6 +44,7 @@
 }
 
 .example__description {
+  font-family: @main-font;
   padding-bottom: 20px;
   margin: 0;
   font-size: 14px;
