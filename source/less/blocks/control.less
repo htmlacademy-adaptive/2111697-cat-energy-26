@@ -21,23 +21,35 @@
 .control__form {
   position: absolute;
   content: "";
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 1px solid @states-colors;
   left: 0;
-  top: -10px;
+  top: -6px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .control__input:checked + .control__form::before {
   position: absolute;
   content: "";
   border-radius: 50%;
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   background-color: @accent-colors;
-  right: 10px;
-  bottom: 10px;
+  right: 7px;
+  bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    right: 10px;
+    bottom: 10px;
+  }
 }
 
 .control__input:hover + .control__form {

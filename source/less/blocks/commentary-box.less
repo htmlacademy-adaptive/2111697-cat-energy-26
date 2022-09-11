@@ -67,9 +67,15 @@
   font-size: 16px;
   line-height: 18px;
   color: @dark-colors;
+  outline: none;
 
   &:hover {
     border: 1px solid @states-colors;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px solid #444444;
   }
 
   @media (min-width: @tablet-width) {
