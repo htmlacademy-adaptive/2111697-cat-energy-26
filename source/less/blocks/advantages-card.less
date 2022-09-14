@@ -6,17 +6,30 @@
   min-width: 122px;
 
   @media (min-width: @tablet-width) {
-    min-height: 72px;
+    min-height: 75px;
     min-width: 162px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     min-height: 77px;
   }
 }
 
+@media (min-width: @tablet-width) {
+  .advantages__card--time {
+    position: relative;
+    right: 55px;
+
+    @media (min-width: @desktop-width) {
+      right: 70px;
+      top: 2px;
+    }
+  }
+}
+
 .advantages-card__lost {
-  inset: calc(100% - 0.3em) 0 auto;
+  margin: 0 16px;
+  padding: 0 10px;
 
   @media (min-width: @tablet-width) {
     margin-left: 20px;
@@ -26,6 +39,9 @@
 }
 
 .advantages-card__spend {
+  padding: 0 3px;
+  margin: 0 16px;
+
   @media (min-width: @tablet-width) {
     margin-left: 5px;
     margin-right: 5px;
@@ -38,19 +54,14 @@
 
 .advantages-card__style {
   position: absolute;
-  inset: calc(100% - 0.4em) 0 auto;
+  inset: calc(100% - 0.9em) 0 auto;
   font-family: @main-font;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
   color: @dark-colors;
-  margin: 0;
-  margin-left: 10px;
-  margin-right: 10px;
   background-color: #eaeaea;
-  padding-left: 10px;
-  padding-right: 10px;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
@@ -65,7 +76,7 @@
 }
 
 .advantages-card__weight {
-  padding: 14px 45px 18px 46px;
+  padding: 14px 43px 18px 41px;
 
   @media (min-width: @tablet-width) {
     padding: 15px 57px 11px;
@@ -98,18 +109,20 @@
   display: flex;
   text-transform: uppercase;
   line-height: 20px;
-  padding: 20px;
+  padding: 12px 20px;
 
   @media (min-width: @tablet-width) {
     align-items: flex-end;
     flex-direction: column;
-    padding-right: 0;
+    padding-right: 3px;
+    gap: 7px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     padding: 0;
     padding-top: 55px;
+    gap: 0;
   }
 }
 

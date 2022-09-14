@@ -1,5 +1,9 @@
 .box {
-  padding: 0 var(--side-offset) 49px;
+  padding: 0 var(--side-offset) 40px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 var(--side-offset) 0;
+  }
 }
 
 .box__list {
@@ -8,7 +12,7 @@
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
-  gap: 20px;
+  gap: 16px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -37,7 +41,7 @@
     counter-increment: box;
     flex-basis: calc(50% - 30px);
     padding-top: calc(80px + 31px);
-    margin-bottom: 70px;
+    margin-bottom: 49px;
   }
 }
 
@@ -92,6 +96,10 @@
 .box__item-meal {
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 110px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -105,16 +113,26 @@
 
   @media (min-width: @tablet-width) {
     &::before {
-      background-image: url("/img/meal-desktop.svg");
+      background-image: url("/img/date-desktop.svg");
       width: 80px;
       height: 80px;
-      top: 0;
+      top: -2px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      left: 5px;
     }
   }
 }
 
 .box__item-date {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 110px;
+  }
 
   &::before {
     position: absolute;
@@ -123,16 +141,22 @@
     width: 60px;
     height: 60px;
     bottom: -3px;
-    top: -2px;
+    top: -4px;
     background-repeat: no-repeat;
   }
 
   @media (min-width: @tablet-width) {
     &::before {
-      background-image: url("/img/date-desktop.svg");
+      background-image: url("/img/meal-desktop.svg");
       width: 80px;
       height: 80px;
-      top: 0;
+      top: -2px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      left: 7px;
     }
   }
 }
@@ -143,6 +167,7 @@
   font-weight: 400;
   margin: 0 auto;
   padding-bottom: 40px;
+  padding-top: 3px;
 
   @media (min-width: @tablet-width) {
     padding-top: 25px;
@@ -150,6 +175,10 @@
     font-size: 60px;
     line-height: 60px;
     padding-bottom: 73px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 57px;
   }
 }
 
@@ -160,9 +189,8 @@
   font-size: 14px;
   line-height: 18px;
   color: @dark-colors;
-  margin: 0;
   text-align: left;
-  margin-left: 80px;
+  margin: 0 0 0 80px;
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
@@ -182,7 +210,7 @@
       line-height: 280px;
       color: #f2f2f2;
       position: absolute;
-      top: -132px;
+      top: -151px;
       right: 40px;
       z-index: -10;
     }
@@ -198,6 +226,18 @@
   }
 }
 
+li:nth-child(1) p::after {
+  right: 28px;
+}
+
 li:nth-child(2) p::after {
-  right: -7px;
+  right: 8px;
+}
+
+li:nth-child(3) p::after {
+  right: 5px;
+}
+
+li:nth-child(4) p::after {
+  right: 5px;
 }

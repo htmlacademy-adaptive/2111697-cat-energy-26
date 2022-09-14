@@ -7,13 +7,13 @@
   line-height: 16px;
   color: #000000;
   margin: 0;
-  padding-top: 22px;
+  padding-top: 18.5px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    padding: 24px 0 32px 32px;
+    padding: 24px 0 35px 32px;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
@@ -65,6 +65,10 @@
     margin-left: 15px;
     transform-origin: left center;
     box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 25px;
+    }
   }
 
   &::after {

@@ -10,7 +10,7 @@
   background-color: #f2f2f2;
   display: flex;
   justify-content: space-around;
-  padding: 26px 20px;
+  padding: 29px 20px;
 
   @media (min-width: @tablet-width) {
     padding-left: 70px;
@@ -22,12 +22,12 @@
   display: flex;
   justify-content: space-around;
   background-color: #ffffff;
-  padding: 26px 20px;
+  padding: 26px 19px;
   position: relative;
   gap: 10px;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 70px;
+    padding: 61px 70px;
     justify-content: space-between;
   }
 
@@ -35,7 +35,7 @@
     position: absolute;
     content: "";
     width: 565px;
-    height: 190px;
+    height: 196px;
     top: 95px;
     left: 110px;
     background-color: #ffffff;
@@ -53,6 +53,12 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .footer-location {
+    height: 400px;
+  }
+}
+
 .footer__title {
   font-style: normal;
   font-weight: 400;
@@ -65,6 +71,12 @@
     font-size: 20px;
     line-height: 26px;
     max-width: 170px;
+
+    &--position {
+      position: relative;
+      left: -3px;
+      top: 1px;
+    }
   }
 }
 
@@ -81,6 +93,7 @@
     font-size: 16px;
     line-height: 20px;
     max-width: 160px;
+    text-align: end;
   }
 }
 
@@ -88,14 +101,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 10px var(--side-offset) 20px;
+  padding: 13px var(--side-offset) 20px;
 }
 
 @media (min-width: @tablet-width) {
   .footer-social {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border: none;
+    display: flex;
+    border: 0;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 35px;
   }
 }
 
@@ -109,8 +124,8 @@
 }
 
 .footer-social__logo-cat-energy {
-  padding-bottom: 32px;
-  padding-top: 39px;
+  padding-bottom: 28px;
+  padding-top: 26px;
 }
 
 .logo-cat-energy-link:hover {
@@ -122,7 +137,7 @@
 }
 
 .footer-copyright {
-  padding-top: 30px;
+  padding-top: 21px;
   width: 100%;
 }
 
@@ -149,6 +164,7 @@
   .copyright-link {
     display: flex;
     gap: 22px;
+    padding-bottom: 5px;
     justify-content: flex-end;
   }
 }

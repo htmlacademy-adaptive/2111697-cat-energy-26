@@ -3,7 +3,7 @@
   font-size: 36px;
   line-height: 36px;
   margin: 0;
-  padding: 26px var(--side-offset) 41px;
+  padding: 28px var(--side-offset) 41px;
   border-bottom: 1px solid #ebebeb;
   background-color: #ffffff;
 
@@ -46,7 +46,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
   row-gap: 13px;
-  padding: 11px 20px 13px 18px;
+  padding: 21px 20px 24px 20px;
   border-bottom: 1px solid #ebebeb;
 
   @media (min-width: @tablet-width) {
@@ -100,29 +100,35 @@
 }
 
 .catalog__image {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    top: -72px;
-    right: 73px;
-    width: 172px;
-    height: 206px;
-  }
+  padding-top: 7px;
 
-  @media (min-width: @desktop-width) {
-    top: -72px;
-    right: 38px;
-  }
-}
+  &--small {
+    padding-top: 26px;
 
-@media (min-width: @tablet-width) {
-  .catalog__image--small {
-    top: -48px;
-    width: 163px;
-    height: 174px;
-  }
+    @media (min-width: @tablet-width) {
+      &--small {
+        top: -48px;
+        width: 163px;
+        height: 174px;
 
-  @media (min-width: @desktop-width) {
-    top: -44px;
+        @media (min-width: @desktop-width) {
+          top: -44px;
+        }
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: -72px;
+      right: 73px;
+      width: 172px;
+      height: 206px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -72px;
+      right: 38px;
+    }
   }
 }
 
@@ -160,6 +166,31 @@
   }
 }
 
+// .catalog__card__link--chicken {
+//   position: relative;
+//   top: 5px;
+// }
+
+// .catalog__card__link--fish {
+//   position: relative;
+//   top: 11px;
+// }
+
+// .catalog__card__link--big__fish {
+//   position: relative;
+//   top: 9px;
+// }
+
+// .catalog__card__link--buckwheat {
+//   position: relative;
+//   top: 15px;
+// }
+
+// .catalog__card__link--big__buckwheat {
+//   position: relative;
+//   top: 12px;
+// }
+
 .catalog__info {
   display: flex;
   justify-content: space-between;
@@ -193,6 +224,7 @@
   grid-column: 2/3;
   min-height: 44px;
   max-width: 167px;
+  padding-bottom: 8px;
 
   @media (min-width: @tablet-width) {
     max-width: 252px;
