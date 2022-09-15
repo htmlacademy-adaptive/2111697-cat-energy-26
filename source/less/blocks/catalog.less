@@ -12,8 +12,12 @@
     font-size: 60px;
     line-height: 60px;
     border: none;
-    padding-bottom: 118px;
-    padding-top: 64px;
+    padding-bottom: 137px;
+    padding-top: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 42px;
   }
 }
 
@@ -31,7 +35,7 @@
     justify-content: space-between;
     gap: 140px 56px;
     flex-wrap: wrap;
-    padding: 45px var(--side-offset) 20px;
+    padding: 26px var(--side-offset) 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -51,20 +55,20 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    padding: 149px 36px 39px 36px;
+    padding: 161px 38px 38px;
     background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     gap: 0;
-    min-height: 430px;
+    max-height: 430px;
     min-width: 324px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 39px;
     padding-right: 38px;
-    padding-bottom: 45px;
+    padding-bottom: 37px;
     background-color: #f2f2f2;
     justify-content: flex-end;
     min-width: 245px;
@@ -96,38 +100,66 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 21px;
+    margin-right: 2px;
+    margin-top: 5px;
   }
 }
 
 .catalog__image {
   padding-top: 7px;
 
-  &--small {
-    padding-top: 26px;
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -80px;
+    right: 81px;
+  }
 
-    @media (min-width: @tablet-width) {
-      &--small {
-        top: -48px;
-        width: 163px;
-        height: 174px;
+  @media (min-width: @desktop-width) {
+    top: -84px;
+    right: 38px;
+  }
 
-        @media (min-width: @desktop-width) {
-          top: -44px;
-        }
-      }
-    }
+  &--chicken {
+    padding-top: 4px;
 
     @media (min-width: @tablet-width) {
       position: absolute;
-      top: -72px;
-      right: 73px;
-      width: 172px;
-      height: 206px;
+      top: -51px;
+    }
+  }
+
+  &--fish {
+    padding-top: 18px;
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: -66px;
+    }
+  }
+
+  &--buckwheat {
+    padding-top: 24px;
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: -66px;
     }
 
     @media (min-width: @desktop-width) {
       top: -72px;
-      right: 38px;
+    }
+  }
+
+  &--rice {
+    padding-top: 23px;
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: -66px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -75px;
     }
   }
 }
@@ -165,31 +197,6 @@
     text-decoration: none;
   }
 }
-
-// .catalog__card__link--chicken {
-//   position: relative;
-//   top: 5px;
-// }
-
-// .catalog__card__link--fish {
-//   position: relative;
-//   top: 11px;
-// }
-
-// .catalog__card__link--big__fish {
-//   position: relative;
-//   top: 9px;
-// }
-
-// .catalog__card__link--buckwheat {
-//   position: relative;
-//   top: 15px;
-// }
-
-// .catalog__card__link--big__buckwheat {
-//   position: relative;
-//   top: 12px;
-// }
 
 .catalog__info {
   display: flex;
@@ -229,7 +236,7 @@
   @media (min-width: @tablet-width) {
     max-width: 252px;
     padding-top: 21px;
-    padding-bottom: 33px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {

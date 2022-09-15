@@ -22,15 +22,15 @@
   display: grid;
   grid-template-columns: auto minmax(220px, 1fr);
   align-items: center;
-  gap: 10px;
+  gap: 13px;
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    column-gap: 10px;
+    column-gap: 17px;
   }
 
   @media (min-width: @desktop-width) {
-    column-gap: 10px;
+    column-gap: 15px;
   }
 }
 
@@ -42,7 +42,7 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    column-gap: 10px;
+    column-gap: 21px;
   }
 
   @media (min-width: @desktop-width) {
@@ -53,12 +53,12 @@
 .list-item__age {
   display: grid;
   grid-template-columns: auto  minmax(167px, 1fr);
-  column-gap: 10px;
+  column-gap: 15px;
   align-items: center;
   width: 100%;
 
-  @media (min-width: @desktop-width) {
-    // grid-template-columns: 119px minmax(167px, 1fr);
+  @media (min-width: @tablet-width) {
+    column-gap: 18px;
   }
 }
 
@@ -97,6 +97,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 23px;
+    padding-left: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  li:nth-child(3) .list-item__input {
+    padding-left: 17px;
   }
 }

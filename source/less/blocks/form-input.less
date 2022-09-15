@@ -21,6 +21,7 @@
     font-size: 20px;
     line-height: 30px;
     padding: 10px 10px;
+    padding-left: 20px;
   }
 
   &:hover {
@@ -66,9 +67,10 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    gap: 18px;
+    gap: 20px;
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -101,14 +103,15 @@
   }
 }
 
-.form-input__icon-email {
-  position: absolute;
-  content: "";
-  right: 20px;
-}
-
+.form-input__icon-email,
 .form-input__icon-telephone {
   position: absolute;
   content: "";
-  right: 20px;
+  right: 14px;
+}
+
+@media (min-width: @desktop-width) {
+  .form-input__icon-email {
+    right: 17px;
+  }
 }

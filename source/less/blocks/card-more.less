@@ -1,5 +1,5 @@
 .card-more {
-  padding: 25px 20px 25px;
+  padding: 27px 20px 25px;
   text-align: center;
   border-bottom: 1px solid #ebebeb;
 
@@ -15,7 +15,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 51px 38px 41px;
+    padding: 51px 38px 37px;
     justify-content: space-between;
     min-width: 245px;
   }
@@ -51,8 +51,12 @@
 
     @media (min-width: @tablet-width) {
       width: 60px;
-      right: 41px;
+      right: 36px;
       top: 6px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 28px;
     }
   }
 
@@ -68,8 +72,12 @@
 
     @media (min-width: @tablet-width) {
       width: 60px;
-      right: 41px;
+      right: 38px;
       top: 6px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 29px;
     }
   }
 }
@@ -87,12 +95,12 @@
     font-size: 20px;
     line-height: 22px;
     padding: 0;
-    margin-top: 75px;
+    margin-top: 86px;
     margin-bottom: 15px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 86px;
+    margin-top: 109px;
   }
 }
 
@@ -110,12 +118,13 @@
     font-size: 16px;
     line-height: 18px;
     max-width: 167px;
-    margin-bottom: 94px;
+    margin-bottom: 87px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 73px;
+    margin-bottom: 75px;
     margin-top: 0;
+    width: 167px;
   }
 }
 
@@ -133,12 +142,7 @@
   background-color: #f2f2f2;
   color: @dark-colors;
 
-  &:hover {
-    background-color: #ebebeb;
-    color: @dark-colors;
-  }
-
-
+  &:hover,
   &:focus {
     background-color: #ebebeb;
     color: @dark-colors;

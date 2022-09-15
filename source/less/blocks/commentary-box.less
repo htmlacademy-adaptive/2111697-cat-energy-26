@@ -1,7 +1,7 @@
 .commentary-box {
   position: relative;
   margin: 0;
-  padding: 0 var(--side-offset) 23px;
+  padding: 0 var(--side-offset) 20px;
   z-index: 1;
 
   &::before {
@@ -16,12 +16,20 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 65px var(--side-offset) 43px;
+    padding: 65px var(--side-offset) 62px;
 
     &::before {
       width: 100%;
       top: 86px;
       right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 43px var(--side-offset) 65px;
+
+    &::before {
+      top: 65px;
     }
   }
 }
@@ -49,7 +57,7 @@
 
   @media (min-width: @desktop-width) {
     width: 20%;
-    padding-right: 43px;
+    padding-right: 38px;
     padding-left: 0;
     text-align: end;
   }
@@ -82,5 +90,6 @@
     font-size: 20px;
     line-height: 30px;
     height: 174px;
+    padding-left: 19px;
   }
 }

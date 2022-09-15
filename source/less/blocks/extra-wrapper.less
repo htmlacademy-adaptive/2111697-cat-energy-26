@@ -1,14 +1,22 @@
 .extra-wrapper {
   position: relative;
   margin: 0;
-  padding: 22px var(--side-offset) 20px;
+  padding: 0 var(--side-offset) 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 var(--side-offset) 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 var(--side-offset) 61px;
+  }
 
   &::before {
     position: absolute;
     content: "";
     height: 2px;
     background-color: @accent-colors;
-    top: 35px;
+    top: 15px;
     width: 80%;
     right: 1px;
     z-index: -1;
@@ -17,7 +25,7 @@
   @media (min-width: @tablet-width) {
     &::before {
       width: 100%;
-      top: 42px;
+      top: 22px;
     }
   }
 }
@@ -29,16 +37,18 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 61px;
+    gap: 37px 61px;
     align-items: center;
     justify-items: flex-start;
+    padding-top: 23px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 244px);
-    gap: 61px 81px;
+    gap: 46px 81px;
     padding: 0;
+    padding-top: 21px;
   }
 }
 
@@ -54,18 +64,18 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    width: 50%;
+    width: 44%;
     margin-left: -27px;
     padding-left: 25px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 25%;
+    width: 23%;
   }
 }
 
 .extra-wrapper__label {
-  margin-bottom: 35px;
+  margin-bottom: 18.5px;
   position: relative;
   display: block;
 
@@ -108,7 +118,7 @@
 
 .extra-wrapper__name {
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 46px;
   margin-top: 5px;
   font-weight: 400;
   font-size: 16px;
@@ -118,12 +128,13 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-left: 59px;
   }
 }
 
 .extra-wrapper__button-large {
   padding: 10px 44px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   margin-top: 21px;
 
   @media (min-width: @tablet-width) {
@@ -134,7 +145,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 13px 188px;
+    padding: 16px 188px;
     grid-column: 1/3;
   }
 }
