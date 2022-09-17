@@ -30,19 +30,19 @@
     <nav class="main-nav main-nav--closed main-nav--opened">
       <button class="main-nav__toggle main-nav__toggle--no-js" type="button" hidden aria-label="Открыть меню">
       </button>
-      <ul class="main-nav__list main-nav__list--enabled main-nav__list--desktop">
-        <li class="site-list__item
-            site-list__item--current site-list__item--white site-list__item--desktop">
+      <ul class="main-nav__list main-nav__list--desktop">
+        <li class="main-nav__list-item
+          main-nav__list-item--current main-nav__list-item--white main-nav__list-item--desktop">
           <a>
             Главная
           </a>
         </li>
-        <li class="site-list__item site-list__item--white">
+        <li class="main-nav__list-item main-nav__list-item--white">
           <a href="catalog.html">
             Каталог продукции
           </a>
         </li>
-        <li class="site-list__item site-list__item--white">
+        <li class="main-nav__list-item main-nav__list-item--white">
           <a href="form.html">
             Подбор программы
           </a>
@@ -60,6 +60,10 @@
           Занялся собой? Займись котом!
         </p>
         <picture class="promo__picture">
+          <source type="image/webp" media="(min-width: 1200px)" srcset="./img/index-can-desktop.webp , ./img/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/index-can-tablet.webp , ./img/index-can-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./img/index-can-mobile.webp , ./img/index-can-mobile@2x.webp 2x">
+
           <source media="(min-width: 1200px)" srcset="./img/index-can-desktop.png , ./img/index-can-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="./img/index-can-tablet.jpg , ./img/index-can-tablet@2x.jpg 2x">
           <img class="promo__image" src="./img/index-can-mobile.png" srcset="./img/index-can-mobile@2x.png 2x" width="280" height="265" alt="Cat energy pro со вкусом курицы">
@@ -131,15 +135,15 @@
           <dt class="advantages-card__weight advantages-card__repeat">5 кг</dt>
           <dd class="advantages-card__lost advantages-card__style">снижение веса</dd>
         </div>
-        <div class="advantages-card advantages__card--time">
+        <div class="advantages-card advantages-card--time">
           <dt class="advantages-card__days advantages-card__repeat">60 дней</dt>
           <dd class="advantages-card__spend advantages-card__style">затрачено времени</dd>
         </div>
-        <div class="advantages-card__price ">
-          <dt class="advantages-card__text">
+        <div class="box-price">
+          <dt class="box-price__text">
             Затраты на питание:
           </dt>
-          <dd class="advantages-card__cost">
+          <dd class="box-price__cost">
             15 000 руб.
           </dd>
         </div>
@@ -147,23 +151,31 @@
       <div class="comparison-slider">
         <div class="comparison-slider__before">
           <picture>
-            <source media="(min-width: 1400px)" srcset="img/tablet-cat-before.png" width="560" height="512">
-            <source media="(min-width: 768px)" srcset="img/tablet-cat-before.png" width="560" height="512">
-            <img src="/img/mobile-cat-before.png" loading="lazy" width="280" height="256" alt="Изображение кота до">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/tablet-cat-before@2x.webp , img/tablet-cat-before@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet-cat-before.webp , img/tablet-cat-before@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" srcset="img/mobile-cat-before.webp , img/mobile-cat-before@2x.webp 2x">
+
+            <source media="(min-width: 1400px)" srcset="img/tablet-cat-before.png , img/tablet-cat-before@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/tablet-cat-before.png , img/tablet-cat-before@2x.png 2x">
+            <img src="img/mobile-cat-before.png,img/mobile-cat-before@2x.png 2x"  width="280" height="256" alt="Изображение кота до">
           </picture>
         </div>
         <div class="comparison-slider__after">
           <picture>
-          <source media="(min-width: 1400px)" srcset="img/tablet-cat-after.png" width="560" height="512">
-          <source media="(min-width: 768px)" srcset="img/tablet-cat-after.png" width="560" height="512">
-          <img src="/img/mobile-cat-after.png" loading="lazy" width="280" height="256" alt="Изображение кота до">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/tablet-cat-after@2x.webp , img/tablet-cat-after@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet-cat-after.webp , img/tablet-cat-after@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" srcset="img/mobile-cat-after.webp , img/mobile-cat-after@2x.webp 2x">
+
+          <source media="(min-width: 1400px)" srcset="img/tablet-cat-after.png , img/tablet-cat-after@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/tablet-cat-after.png , img/tablet-cat-after@2x.png 2x">
+          <img src="img/mobile-cat-after.png,img/mobile-cat-after@2x.png" width="280" height="256" alt="Изображение кота после">
           </picture>
         </div>
         <div class="range-scale">
           <button class="range-scale__bar" type="button">
             <svg class="range-scale__bar-icon" width="24" height="18" viewbox="0 0 24 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 0 0 9l8 9V0ZM24 9l-8-9v18l8-9Z"/>
             </svg>
-            <span class="page__hidden">слайдер</span>
+            <span class="page__hidden">слайдер до и после</span>
           </button>
         </div>
       </div>
@@ -175,14 +187,12 @@
         &nbsp;к&nbsp;сотрудничеству
         дилеров!</b>
       <p class="footer__text">
-        <span class="footer__text__steet">ул. Большая
+        <span class="footer__street">ул. Большая
           Конюшенная,&nbsp;д.&nbsp;19/8&nbsp;</span>
-        <span class="footer__text__sity">Санкт-Петербург</span>
+        <span class="footer__city">Санкт-Петербург</span>
         </p>
     </address>
-    <div class="footer-location">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021609819!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1660041843113!5m2!1sru!2sru" width="100%" height="100%" title="карта html academy" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021609819!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1660041843113!5m2!1sru!2sru" class="footer__location" width="320" height="362" title="карта html academy" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="footer-social footer-social--index">
       <div class="footer-social__logo-cat-energy logo-cat-energy">
         <a class="logo-cat-energy-link" href="#">

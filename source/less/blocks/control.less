@@ -1,17 +1,3 @@
-.control__label {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #222222;
-  cursor: pointer;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
 .control {
   position: relative;
   display: block;
@@ -39,6 +25,20 @@
   }
 }
 
+.control__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #222222;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 .control__input:checked + .control__form::before {
   position: absolute;
   content: "";
@@ -55,6 +55,10 @@
     right: 10px;
     bottom: 10px;
   }
+}
+
+.control__input:focus + .control__form {
+  outline: 2px solid @dark-colors;
 }
 
 .control__input:hover + .control__form {

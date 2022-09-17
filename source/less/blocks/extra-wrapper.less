@@ -58,19 +58,16 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  width: 57%;
+  width: fit-content;
   background-color: #ffffff;
+  padding-right: 23px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    width: 44%;
     margin-left: -27px;
     padding-left: 25px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 23%;
+    padding-right: 41px;
   }
 }
 
@@ -166,6 +163,10 @@
   @media (min-width: @desktop-width) {
     grid-column: 3 /4;
   }
+}
+
+.extra-wrapper__input:focus + .extra-wrapper__mark {
+  outline: 2px solid @dark-colors;
 }
 
 .extra-wrapper__input:hover + .extra-wrapper__mark {

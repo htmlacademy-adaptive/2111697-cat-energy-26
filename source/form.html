@@ -29,19 +29,19 @@
       <nav class="main-nav main-nav--closed main-nav--opened">
         <button class="main-nav__toggle main-nav__toggle--no-js" type="button" hidden aria-label="Открыть меню">
         </button>
-        <ul class="main-nav__list main-nav__list--enabled site-list">
-          <li class="site-list__item">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
             <a href="index.html">
               Главная
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__list-item">
             <a href="catalog.html">
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item
-            site-list__item--current">
+          <li class="main-nav__list-item
+            main-nav__list-item--current">
             <a href="catalog.html">
               Подбор программы
             </a>
@@ -69,6 +69,7 @@
               <li class="list-item">
                 <label class="list-item__nickname" for="nickname">
                   <span class="list-item__text">Имя:*</span>
+                  <span class="page__hidden">Введите имя кота</span>
                   <input
                     class="list-item__input"
                     type="text"
@@ -83,6 +84,7 @@
               <li class="list-item">
                 <label class="list-item__weight" for="weight">
                   <span class="list-item__text">Вес (кг):*</span>
+                  <span class="page__hidden">Введите вес кота</span>
                   <input
                     class="list-item__input"
                     type="text"
@@ -97,6 +99,7 @@
               <li class="list-item">
                 <label class="list-item__age" for="age">
                   <span class="list-item__text">Возраст (лет):</span>
+                  <span class="page__hidden">Введите возраст кота</span>
                   <input
                     class="list-item__input"
                     type="text"
@@ -151,12 +154,13 @@
             </div>
           </div>
           <div class="user-contacts">
-            <h3 class="user-contacts__title title">
+            <h3 class="user-contacts__title">
               Контактные данные (владельца кота)
             </h3>
             <div class="form-input">
               <label class="form-input__email" for="email"
                 >E-mail:*
+                <span class="page__hidden">Введите ваш email адрес</span>
                 <input
                   class="form-input__place"
                   type="email"
@@ -171,6 +175,7 @@
               </label>
               <label class="form-input__tel" for="tel"
                 >Телефон:*
+                <span class="page__hidden">Введите ваш телефон</span>
                 <input
                   class="form-input__place"
                   type="tel"
@@ -187,7 +192,7 @@
             </div>
           </div>
           <div class="commentary-box">
-            <h3 class="commentary-box__title title">Комментарий</h3>
+            <h3 class="commentary-box__title">Комментарий</h3>
             <textarea
               class="commentary-box__area"
               name="comment"
@@ -238,14 +243,12 @@
           &nbsp;к&nbsp;сотрудничеству
           дилеров!</b>
           <p class="footer__text">
-            <span class="footer__text__steet">ул. Большая
+            <span class="footer__street">ул. Большая
               Конюшенная,&nbsp;д.&nbsp;19/8&nbsp;</span>
-            <span class="footer__text__sity">Санкт-Петербург</span>
+            <span class="footer__city">Санкт-Петербург</span>
             </p>
       </address>
-      <div class="footer-location">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021609819!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1660041843113!5m2!1sru!2sru" width="100%" height="100%" title="карта html academy" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021609819!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1660041843113!5m2!1sru!2sru" class="footer__location" width="320" height="362" title="карта html academy" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="footer-social footer-social--form">
         <div class="footer-social__logo-cat-energy logo-cat-energy">
           <a class="logo-cat-energy-link" href="#">

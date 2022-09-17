@@ -23,23 +23,19 @@
 
 .catalog__list {
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   background-color: #ffffff;
   margin: 0 auto;
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 324px);
+    justify-content: center;
     gap: 140px 56px;
-    flex-wrap: wrap;
     padding: 26px var(--side-offset) 20px;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
     gap: 143px 80px;
     grid-template-columns: repeat(4, 1fr);
   }
