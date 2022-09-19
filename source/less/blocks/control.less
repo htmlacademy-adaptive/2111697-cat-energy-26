@@ -1,0 +1,80 @@
+.control {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+}
+
+.control__form {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid @states-colors;
+  left: 0;
+  top: -6px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.control__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #222222;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.control__input:checked + .control__form::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  background-color: @accent-colors;
+  right: 7px;
+  bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.control__input:focus + .control__form {
+  outline: 2px solid @dark-colors;
+}
+
+.control__input:hover + .control__form {
+  border: 1px solid #bababa;
+}
+
+.control__input:hover ~ .control__label {
+  opacity: 0.8;
+}
+
+.control__input:active + .control__form,
+.control__input:active ~ .control__label {
+  opacity: 0.6;
+}
+
+.control__input:disabled + .control__form,
+.control__input:disabled ~ .control__label {
+  opacity: 0.3;
+}

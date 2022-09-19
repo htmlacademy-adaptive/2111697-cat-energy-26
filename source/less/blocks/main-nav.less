@@ -7,7 +7,6 @@
   }
 }
 
-
 .main-nav__list {
   list-style-type: none;
   margin: 0;
@@ -32,11 +31,17 @@
     display: flex;
     position: unset;
     flex-direction: row;
-    gap: 20px;
+    gap: 37px;
+    max-width: 443px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: transparent;
+    max-width: 750px;
+
+    &--desktop {
+      max-width: 42vw;
+    }
   }
 }
 
@@ -47,17 +52,99 @@
   width: 24px;
   background-repeat: no-repeat;
   background-color: #ffffff;
-  background-image: url("/img/button-header.svg");
-  right: 21px;
-  top: 23px;
+  background-image: url("../img/button-header.svg");
+  right: 20px;
+  top: 22px;
   cursor: pointer;
   border: none;
 
   &--opened {
-    background-image: url("/img/icon-close.svg");
+    background-image: url("../img/icon-close.svg");
   }
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.main-nav__list-item {
+  border-top: 1px solid #d9d9d9;
+  padding: 21px 20px 23px;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+    padding: 0;
+  }
+}
+
+.main-nav__list-item a {
+  list-style-type: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    &--current::before {
+      position: absolute;
+      content: "";
+      background-color: var(--current-color, @accent-colors);
+      height: 2px;
+      bottom: -10px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.main-nav__list-item--white a {
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list-item--current {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: @accent-colors;
+      bottom: -11px;
+      left: 0;
+
+      @media (min-width: @desktop-width) {
+        bottom: -7px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list-item--desktop {
+    &::after {
+      background-color: #ffffff;
+    }
   }
 }

@@ -1,11 +1,12 @@
 .button {
-  background-color: #68b738;
+  background-color: @accent-colors;
   color: #ffffff;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
   text-decoration: none;
   width: 100%;
+  flex-wrap: wrap;
   font-family: @accent-font;
   font-style: normal;
   font-weight: 400;
@@ -18,11 +19,9 @@
 .button:hover,
 .button:focus {
   background-color: #5eaa2f;
-  box-shadow: -3px 3px 5px #7fbd58;
 }
 
 .button:active {
   background-color: #5eaa2f;
   color: rgba(255, 255, 255, 0.3);
-  box-shadow: -3px 3px 5px #7fbd58;
 }

@@ -1,5 +1,5 @@
 .card-more {
-  padding: 25px 20px 25px;
+  padding: 27px 20px 25px;
   text-align: center;
   border-bottom: 1px solid #ebebeb;
 
@@ -10,12 +10,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 429px;
+    min-height: 430px;
+    min-width: 324px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 51px 38px 41px;
+    padding: 51px 38px 37px;
     justify-content: space-between;
+    min-width: 245px;
   }
 }
 
@@ -23,7 +25,7 @@
   position: relative;
   text-decoration: none;
   background-color: #f2f2f2;
-  color: #444444;
+  color: @dark-colors;
   font-size: 16px;
   line-height: 20px;
 
@@ -49,8 +51,12 @@
 
     @media (min-width: @tablet-width) {
       width: 60px;
-      right: 41px;
+      right: 36px;
       top: 6px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 28px;
     }
   }
 
@@ -66,8 +72,12 @@
 
     @media (min-width: @tablet-width) {
       width: 60px;
-      right: 41px;
+      right: 38px;
       top: 6px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 29px;
     }
   }
 }
@@ -77,8 +87,7 @@
   font-size: 16px;
   line-height: 20px;
   color: #111111;
-  margin: 0;
-  margin-top: 53px;
+  margin: 51px 0 3px;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -86,12 +95,12 @@
     font-size: 20px;
     line-height: 22px;
     padding: 0;
-    margin-top: 75px;
+    margin-top: 86px;
     margin-bottom: 15px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 86px;
+    margin-top: 109px;
   }
 }
 
@@ -101,20 +110,21 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #444444;
+  color: @dark-colors;
   margin: 0;
   margin-top: 8px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 18px;
-    width: 167px;
-    margin-bottom: 94px;
+    max-width: 167px;
+    margin-bottom: 87px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 73px;
+    margin-bottom: 75px;
     margin-top: 0;
+    width: 167px;
   }
 }
 
@@ -128,33 +138,25 @@
 
 .card-more__link-button {
   margin-top: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 20px;
   background-color: #f2f2f2;
-  color: #444444;
+  color: @dark-colors;
 
-  &:hover {
-    background-color: #ebebeb;
-    color: #444444;
-    box-shadow: -3px 3px 5px #cbcbcb;
-  }
-
-
+  &:hover,
   &:focus {
     background-color: #ebebeb;
-    color: #444444;
-    box-shadow: -3px 3px 5px #cbcbcb;
+    color: @dark-colors;
   }
 
   &:active {
     background-color: #ebebeb;
     color: rgba(68, 68, 68, 30%);
-    box-shadow: -3px 3px 5px #cbcbcb;
   }
 
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: flex-end;
     margin: 0;
+    max-width: 244px;
   }
 }

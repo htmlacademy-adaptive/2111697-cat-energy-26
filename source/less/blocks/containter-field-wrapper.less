@@ -1,0 +1,26 @@
+.containter-field__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 10px var(--side-offset) 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    gap: 80px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.containter-field__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--side-offset) 25px;
+  gap: 15px;
+  margin: 0;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+    gap: 20px;
+  }
+}

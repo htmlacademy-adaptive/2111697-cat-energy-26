@@ -1,17 +1,17 @@
 .wrapper-checkbox {
   border-bottom: 1px solid #d9d9d9;
-  padding-top: 27px;
-  padding-left: 25px;
-  padding-bottom: 25px;
+  padding: 27px 21px 23px 20px;
 
   @media (min-width: @tablet-width) {
     margin-top: 72px;
     border: 1px solid #d9d9d9;
+    padding: 28px 23px 27px 28px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     border: 1px solid #d9d9d9;
+    height: 100%;
   }
 }
 
@@ -19,54 +19,8 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-
-  @media (min-width: @desktop-width) {
-    margin-top: 17px;
-  }
 }
 
 .wrapper-checkbox__form-item:not(:last-of-type) {
-  margin-bottom: 33px;
-}
-
-.form-label {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #222222;
-  cursor: pointer;
-}
-
-.control {
-  position: relative;
-  display: block;
-  padding-left: 50px;
-}
-
-.control-form {
-  position: absolute;
-  content: "";
-  width: 40px;
-  height: 40px;
-  border: 1px solid #cdcdcd;
-  border-radius: 50%;
-  left: 0;
-  top: -10px;
-}
-
-.control__input[type="radio"]:checked + .control-form::before {
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  background-color: #68b738;
-  right: 10px;
-  bottom: 10px;
-}
-
-.control:hover .control-form {
-  border: 1px solid #bababa;
-  cursor: pointer;
+  margin-bottom: 24px;
 }

@@ -1,13 +1,14 @@
 .commentary-box {
   position: relative;
   margin: 0;
-  padding: 0 var(--side-offset) 23px;
+  padding: 0 var(--side-offset) 20px;
   z-index: 1;
 
   &::before {
     position: absolute;
     content: "";
-    border: 2px solid #68b738;
+    height: 2px;
+    background-color: @accent-colors;
     width: 85%;
     top: 15px;
     right: 0;
@@ -15,12 +16,20 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 65px var(--side-offset) 43px;
+    padding: 65px var(--side-offset) 62px;
 
     &::before {
       width: 100%;
       top: 86px;
       right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 43px var(--side-offset) 65px;
+
+    &::before {
+      top: 65px;
     }
   }
 }
@@ -31,7 +40,7 @@
   font-size: 24px;
   line-height: 26px;
   background-color: #ffffff;
-  width: 50%;
+  width: fit-content;
   padding-bottom: 37px;
   padding-right: 20px;
 
@@ -40,16 +49,12 @@
     margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
-    padding: 0;
     margin-left: -27px;
-    padding-left: 25px;
-    width: 40%;
+    padding: 0 38px 0 25px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 20%;
-    padding-right: 43px;
-    padding-left: 0;
+    padding-right: 38px;
     text-align: end;
   }
 }
@@ -65,11 +70,22 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  color: #444444;
+  color: @dark-colors;
+  outline: none;
+
+  &:hover {
+    border: 1px solid @states-colors;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px solid #444444;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     height: 174px;
+    padding-left: 19px;
   }
 }

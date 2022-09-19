@@ -1,6 +1,7 @@
 .header {
   background-color: #ffffff;
   margin: 0;
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -9,17 +10,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
     border: none;
-    padding: 42px var(--side-offset) 30px;
+    padding: 25px var(--side-offset) 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 69px var(--side-offset) 30px;
+    padding: 55px var(--side-offset) 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .header--desktop {
-    padding: 69px var(--side-offset) 20px;
+    padding: 53px var(--side-offset) 20px;
     position: absolute;
     width: 100%;
     top: 0;
@@ -31,7 +32,7 @@
 }
 
 .header__logo-wrapper {
-  padding: 10px var(--side-offset) 20px;
+  padding: 10px var(--side-offset) 13px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -47,5 +48,9 @@
   &:active {
     opacity: 0.6;
     cursor: pointer;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: auto;
   }
 }

@@ -1,6 +1,19 @@
-.programs__link {
+.arrow-link {
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+  margin: 0;
+  padding-top: 18.5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
   @media (min-width: @tablet-width) {
-    padding: 24px 0 32px 32px;
+    padding: 24px 0 35px 32px;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
@@ -11,21 +24,22 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
+    max-width: 36vw;
   }
-}
 
-.arrow-link {
-  position: relative;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 16px;
-  text-decoration: none;
-  color: #000000;
-  margin: 0;
-  padding-top: 22px;
-  display: flex;
-  align-items: center;
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: scaleX(1.3);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: translateX(72%);
+  }
 
   &:active::before {
     transform: scaleX(1.29);
@@ -34,16 +48,7 @@
 
   &:active::after {
     transform: translateX(72%);
-  }
-
-  &:hover::before,
-  &:focus::before {
-    transform: scaleX(1.4);
-  }
-
-  &:hover::after,
-  &:focus::after {
-    transform: translateX(72%);
+    color: rgba(0, 0, 0, 0.3);
   }
 
   &::before,
@@ -60,6 +65,10 @@
     margin-left: 15px;
     transform-origin: left center;
     box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 25px;
+    }
   }
 
   &::after {

@@ -1,0 +1,136 @@
+.programs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-width: 280px;
+  background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    padding: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.programs--skinny {
+  &::before {
+    width: 50px;
+    height: 53px;
+    background-image: url("../img/cat-skinny.svg");
+    top: 20px;
+    left: 22px;
+
+    @media (min-width: @tablet-width) {
+      width: 200px;
+      height: 211px;
+      top: 81px;
+      right: 62px;
+      left: initial;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100px;
+      height: 106px;
+      left: 52px;
+      top: 38px;
+    }
+  }
+}
+
+.programs--fat {
+  &::before {
+    width: 67px;
+    height: 50px;
+    background-image: url("../img/fat-cat.svg");
+    top: 26px;
+    left: 13px;
+
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 200px;
+      right: 27px;
+      left: initial;
+      top: 93px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 100px;
+      left: 33px;
+      top: 46px;
+    }
+  }
+}
+
+.programs__subtitle {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  margin: 9px 0 7px 71px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 32px;
+    padding-top: 52px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+    max-width: 400px;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    padding-top: 77px;
+    padding-left: 22px;
+    justify-self: center;
+    max-width: 24vw;
+  }
+
+  &--weight {
+    @media (min-width: @desktop-width) {
+      margin-top: 0;
+      padding-left: 62px;
+    }
+  }
+}
+
+.programs__description {
+  position: relative;
+  font-family: @main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @dark-colors;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 0 28px 32px;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    width: 56%;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 73px 51px 0;
+    width: 100%;
+  }
+}
