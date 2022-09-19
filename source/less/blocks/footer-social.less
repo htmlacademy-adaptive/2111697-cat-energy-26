@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 10px var(--side-offset) 20px;
+  padding: 8px var(--side-offset) 20px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -13,9 +13,13 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .footer-social--form {
-    padding: 36px var(--side-offset) 31px;
+.footer-social--form {
+  @media (min-width: @tablet-width) {
+    padding: 37px var(--side-offset) 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 32px var(--side-offset) 31px;
   }
 }
 

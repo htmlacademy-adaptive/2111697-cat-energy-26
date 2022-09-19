@@ -3,7 +3,7 @@
   box-sizing: content-box;
   width: 280px;
   height: 256px;
-  margin: 7px 0 30px;
+  margin: 7px auto 30px;
   margin-top: 7px;
 
   @media (min-width: @tablet-width) {
@@ -33,4 +33,11 @@
 
 .comparison-slider__before {
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+@media (min-width: @tablet-width) {
+  .comparison-slider__photo {
+    width: 560px;
+    height: auto;
+  }
 }
